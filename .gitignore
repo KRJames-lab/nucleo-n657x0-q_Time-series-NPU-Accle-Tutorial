@@ -1,0 +1,28 @@
+# STM32CubeIDE build outputs
+Debug/
+Release/
+
+# Eclipse / STM32CubeIDE workspace metadata
+.metadata/
+.settings/*.prefs
+*.launch
+
+# Generated build artifacts
+*.o
+*.d
+*.su
+*.cyclo
+*.lst
+
+# Secret / signing (recreated via SigningTool)
+*-trusted.bin
+
+# Editor
+*~
+*.swp
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
