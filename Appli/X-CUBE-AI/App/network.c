@@ -62,18 +62,16 @@
 /* index=8 file postfix=xSPI2 name=octoFlash offset=0x71000000  absolute_mode size=117440504 READ_ONLY THROUGHPUT=MID LATENCY=HIGH byte width=1 freq ratio=6 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=ON read_power=110 write_power=400 use4initializers=YES score=50  */
 /* global pool 7 is ? */
 /* index=7 file postfix=xSPI1 name=hyperRAM offset=0x90000000  absolute_mode size=33554424 READ_WRITE THROUGHPUT=MID LATENCY=HIGH byte width=2 freq ratio=5 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=ON read_power=380 write_power=340 use4initializers=YES score=82  */
-/* global pool 1 is 46.88 KB */
-/* index=1 file postfix=AXISRAM5 name=npuRAM5 offset=0x342e0000  absolute_mode size=458752 READ_WRITE THROUGHPUT=HIGH LATENCY=LOW byte width=8 freq ratio=1.25 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=18.531 write_power=16.201 use4initializers=NO score=94  */
-/* global pool 2 is ? */
-/* index=2 file postfix=AXISRAM4 name=npuRAM4 offset=0x34270000  absolute_mode size=458752 READ_WRITE THROUGHPUT=HIGH LATENCY=LOW byte width=8 freq ratio=1.25 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=18.531 write_power=16.201 use4initializers=NO score=94  */
-/* global pool 3 is ? */
-/* index=3 file postfix=AXISRAM3 name=npuRAM3 offset=0x34200000  absolute_mode size=458752 READ_WRITE THROUGHPUT=HIGH LATENCY=LOW byte width=8 freq ratio=1.25 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=18.531 write_power=16.201 use4initializers=NO score=94  */
 /* global pool 0 is ? */
-/* index=0 file postfix=AXISRAM6 name=npuRAM6 offset=0x34350000  absolute_mode size=458744 READ_WRITE THROUGHPUT=HIGH LATENCY=LOW byte width=8 freq ratio=1.25 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=19.006 write_power=15.79 use4initializers=NO score=94  */
-/* global pool 11 is 1.92 MB */
-/* index=11 file postfix=AXISRAM2_AXISRAM3_AXISRAM4_AXISRAM5_AXISRAM6 name=cpuRAM2_npuRAM3_npuRAM4_npuRAM5_npuRAM6 offset=0x34100000  absolute_mode size=2883576 vpool READ_WRITE THROUGHPUT=HIGH LATENCY=MID byte width=8 freq ratio=1.25 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=19.006 write_power=16.201 use4initializers=NO score=91  */
-/* global pool 4 is ? */
-/* index=4 file postfix=AXISRAM2 name=cpuRAM2 offset=0x34100000  absolute_mode size=1048576 READ_WRITE THROUGHPUT=MID LATENCY=MID byte width=8 freq ratio=2.5 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=17.324 write_power=15.321 use4initializers=NO score=84  */
+/* index=0 file postfix=AXISRAM6 name=npuRAM6 offset=0x34350000  absolute_mode size=0 READ_WRITE THROUGHPUT=HIGH LATENCY=LOW byte width=8 freq ratio=1.25 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=19.006 write_power=15.79 use4initializers=NO score=94  */
+/* global pool 1 is ? */
+/* index=1 file postfix=AXISRAM5 name=npuRAM5 offset=0x342e0000  absolute_mode size=0 READ_WRITE THROUGHPUT=HIGH LATENCY=LOW byte width=8 freq ratio=1.25 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=18.531 write_power=16.201 use4initializers=NO score=94  */
+/* global pool 2 is ? */
+/* index=2 file postfix=AXISRAM4 name=npuRAM4 offset=0x34270000  absolute_mode size=0 READ_WRITE THROUGHPUT=HIGH LATENCY=LOW byte width=8 freq ratio=1.25 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=18.531 write_power=16.201 use4initializers=NO score=94  */
+/* global pool 3 is ? */
+/* index=3 file postfix=AXISRAM3 name=npuRAM3 offset=0x34200000  absolute_mode size=0 READ_WRITE THROUGHPUT=HIGH LATENCY=LOW byte width=8 freq ratio=1.25 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=18.531 write_power=16.201 use4initializers=NO score=94  */
+/* global pool 4 is 46.88 KB */
+/* index=4 file postfix=AXISRAM2 name=cpuRAM2 offset=0x34100000  absolute_mode size=1048568 READ_WRITE THROUGHPUT=MID LATENCY=MID byte width=8 freq ratio=2.5 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=17.324 write_power=15.321 use4initializers=NO score=84  */
 /* global pool 5 is ? */
 /* index=5 file postfix=AXISRAM1 name=cpuRAM1 offset=0x34064000  absolute_mode size=0 READ_WRITE THROUGHPUT=MID LATENCY=MID byte width=8 freq ratio=2.5 burst max length=MAXINT burst penalty=0 pipelined=ON cacheable=OFF read_power=16.616 write_power=14.522 use4initializers=NO score=84  */
 /* global pool 6 is ? */
@@ -309,7 +307,7 @@ static void LL_ATON_Start_EpochBlock_2(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
   /* Dma inputs units to cycle: */
   /* Unit= 0 [STREAM_ENG_V2 0] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_3 input ports=0 range=1[0,2000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_3 input ports=0 range=4[0,2000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_3_dma_init_in_0_2 = {
     /* 50x20x2(8 bits) */
@@ -318,7 +316,7 @@ static void LL_ATON_Start_EpochBlock_2(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_3_zero_off_out_7 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_3_zero_off_out_7 */
     .offset_start = 0,
     .offset_end = 2000,
     .offset_limit = 2064,
@@ -375,12 +373,12 @@ static void LL_ATON_Start_EpochBlock_2(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 2000 */
+  /* cpuRAM2 -> 2000 */
   /* octoFlash -> 288 */
 
   /* Dma output units from cycle: */
   /* Unit= 7 [STREAM_ENG_V2 7] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_7_suboff_15 output ports=0 range=1[32000,48000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_7_suboff_15 output ports=0 range=4[32000,48000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_7_suboff_15_dma_init_out_0_2 = {
     /* to memory canonical from batch=4 */
@@ -388,7 +386,7 @@ static void LL_ATON_Start_EpochBlock_2(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_7_zero_off_out_16 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_7_zero_off_out_16 */
     .offset_start = 32000,
     .offset_limit = 48064,
     .frame_count = 0,
@@ -410,7 +408,7 @@ static void LL_ATON_Start_EpochBlock_2(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 16000 */
+  /* cpuRAM2 <- 16000 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_2[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 0, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 0, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_3 IN: in unit=CONV_ACC_V2 0 in port=0 out unit=STREAM_ENG_V2 0 out port=0 */
@@ -627,7 +625,7 @@ static void LL_ATON_Start_EpochBlock_3(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
   /* Dma inputs units to cycle: */
   /* Unit= 3 [STREAM_ENG_V2 3] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_7 input ports=0 range=1[32000,48000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_7 input ports=0 range=4[32000,48000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_7_dma_init_in_0_3 = {
     /* 50x20x16(8 bits) */
@@ -636,7 +634,7 @@ static void LL_ATON_Start_EpochBlock_3(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_7_zero_off_out_16 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_7_zero_off_out_16 */
     .offset_start = 32000,
     .offset_end = 48000,
     .offset_limit = 48064,
@@ -693,12 +691,12 @@ static void LL_ATON_Start_EpochBlock_3(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 32000 */
+  /* cpuRAM2 -> 32000 */
   /* octoFlash -> 512 */
 
   /* Dma output units from cycle: */
   /* Unit= 9 [STREAM_ENG_V2 9] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_12_suboff_24 output ports=0 range=1[0,32000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_12_suboff_24 output ports=0 range=4[0,32000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_12_suboff_24_dma_init_out_0_3 = {
     /* to memory canonical from batch=16 */
@@ -706,7 +704,7 @@ static void LL_ATON_Start_EpochBlock_3(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_12_zero_off_out_25 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_12_zero_off_out_25 */
     .offset_start = 0,
     .offset_limit = 32064,
     .frame_count = 0,
@@ -728,7 +726,7 @@ static void LL_ATON_Start_EpochBlock_3(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 32000 */
+  /* cpuRAM2 <- 32000 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_3[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 1, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 3, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_7 IN: in unit=CONV_ACC_V2 1 in port=0 out unit=STREAM_ENG_V2 3 out port=0 */
@@ -945,7 +943,7 @@ static void LL_ATON_Start_EpochBlock_4(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
   /* Dma inputs units to cycle: */
   /* Unit= 1 [STREAM_ENG_V2 1] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_12 input ports=0 range=1[0,32000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_12 input ports=0 range=4[0,32000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_12_dma_init_in_0_4 = {
     .dir = 0,
@@ -953,7 +951,7 @@ static void LL_ATON_Start_EpochBlock_4(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_12_zero_off_out_25 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_12_zero_off_out_25 */
     .offset_start = 0,
     .offset_limit = 32064,
     .frame_count = 0,
@@ -1009,12 +1007,12 @@ static void LL_ATON_Start_EpochBlock_4(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 32000 */
+  /* cpuRAM2 -> 32000 */
   /* octoFlash -> 576 */
 
   /* Dma output units from cycle: */
   /* Unit= 8 [STREAM_ENG_V2 8] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_16_suboff_33 output ports=0 range=1[32000,40000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_16_suboff_33 output ports=0 range=4[32000,40000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_16_suboff_33_dma_init_out_0_4 = {
     /* to memory canonical from batch=2 */
@@ -1022,7 +1020,7 @@ static void LL_ATON_Start_EpochBlock_4(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_16_zero_off_out_34 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_16_zero_off_out_34 */
     .offset_start = 32000,
     .offset_limit = 40064,
     .frame_count = 0,
@@ -1044,7 +1042,7 @@ static void LL_ATON_Start_EpochBlock_4(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 8000 */
+  /* cpuRAM2 <- 8000 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_4[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 2, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 1, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_12 IN: in unit=CONV_ACC_V2 2 in port=0 out unit=STREAM_ENG_V2 1 out port=0 */
@@ -1267,14 +1265,14 @@ static void LL_ATON_Start_EpochBlock_5(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
   /* Dma inputs units to cycle: */
   /* Unit= 5 [STREAM_ENG_V2 5] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_16 input ports=0 range=1[32000,40000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_16 input ports=0 range=4[32000,40000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_16_dma_init_in_0_5 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_16_zero_off_out_34 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_16_zero_off_out_34 */
     .offset_start = 32000,
     .offset_limit = 40064,
     .frame_count = 0,
@@ -1329,14 +1327,14 @@ static void LL_ATON_Start_EpochBlock_5(const LL_ATON_RT_EpochBlockItem_t *epoch_
   LL_Streng_TensorInit(1, &Conv2D_16_dma_init_in_1_5, 1);
 
   /* Unit= 6 [STREAM_ENG_V2 6] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_16_ca_pipe_1 input ports=0 range=1[32000,40000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_16_ca_pipe_1 input ports=0 range=4[32000,40000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_16_ca_pipe_1_dma_init_in_0_5 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_16_zero_off_out_34_copy_in_39 ca pipe offset=1 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_16_zero_off_out_34_copy_in_39 ca pipe offset=1 */
     .offset_start = 32016,
     .offset_limit = 40064,
     .frame_count = 0,
@@ -1358,12 +1356,12 @@ static void LL_ATON_Start_EpochBlock_5(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 8000 */
+  /* cpuRAM2 -> 8000 */
   /* octoFlash -> 1024 */
 
   /* Dma output units from cycle: */
   /* Unit= 3 [STREAM_ENG_V2 3] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_16_off_bias_39 output ports=0 range=1[40000,48000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_16_off_bias_39 output ports=0 range=4[40000,48000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_16_off_bias_39_dma_init_out_0_5 = {
     /* to memory with batch=16 */
@@ -1372,7 +1370,7 @@ static void LL_ATON_Start_EpochBlock_5(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_16_off_bias_out_40 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_16_off_bias_out_40 */
     .offset_start = 40000,
     .offset_end = 44000,
     .offset_limit = 48064,
@@ -1395,7 +1393,7 @@ static void LL_ATON_Start_EpochBlock_5(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 8000 */
+  /* cpuRAM2 <- 8000 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_5[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 3, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 5, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_16 IN: in unit=CONV_ACC_V2 3 in port=0 out unit=STREAM_ENG_V2 5 out port=0 */
@@ -1673,7 +1671,7 @@ static void LL_ATON_Start_EpochBlock_6(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
   /* Dma inputs units to cycle: */
   /* Unit= 7 [STREAM_ENG_V2 7] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_19 input ports=0 range=1[40000,48000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_19 input ports=0 range=4[40000,48000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_19_dma_init_in_0_6 = {
     /* 25x10x16(8 bits) */
@@ -1682,7 +1680,7 @@ static void LL_ATON_Start_EpochBlock_6(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_19_zero_off_out_43 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_19_zero_off_out_43 */
     .offset_start = 40000,
     .offset_end = 44000,
     .offset_limit = 48064,
@@ -1738,7 +1736,7 @@ static void LL_ATON_Start_EpochBlock_6(const LL_ATON_RT_EpochBlockItem_t *epoch_
   LL_Streng_TensorInit(2, &Conv2D_19_dma_init_in_1_6, 1);
 
   /* Unit= 4 [STREAM_ENG_V2 4] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_19_ca_pipe_1 input ports=0 range=1[40000,48000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_19_ca_pipe_1 input ports=0 range=4[40000,48000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_19_ca_pipe_1_dma_init_in_0_6 = {
     /* 25x10x16(8 bits) */
@@ -1747,7 +1745,7 @@ static void LL_ATON_Start_EpochBlock_6(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_19_zero_off_out_43_copy_in_40 ca pipe offset=1 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_19_zero_off_out_43_copy_in_40 ca pipe offset=1 */
     .offset_start = 44000,
     .offset_end = 48000,
     .offset_limit = 48064,
@@ -1770,12 +1768,12 @@ static void LL_ATON_Start_EpochBlock_6(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 32000 */
+  /* cpuRAM2 -> 32000 */
   /* octoFlash -> 2048 */
 
   /* Dma output units from cycle: */
   /* Unit= 8 [STREAM_ENG_V2 8] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_24_suboff_51 output ports=0 range=1[0,16000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_24_suboff_51 output ports=0 range=4[0,16000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_24_suboff_51_dma_init_out_0_6 = {
     /* to memory canonical from batch=16 */
@@ -1783,7 +1781,7 @@ static void LL_ATON_Start_EpochBlock_6(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_24_zero_off_out_52 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_24_zero_off_out_52 */
     .offset_start = 0,
     .offset_limit = 16064,
     .frame_count = 0,
@@ -1805,7 +1803,7 @@ static void LL_ATON_Start_EpochBlock_6(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 16000 */
+  /* cpuRAM2 <- 16000 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_6[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 1, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 7, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_19 IN: in unit=CONV_ACC_V2 1 in port=0 out unit=STREAM_ENG_V2 7 out port=0 */
@@ -2032,14 +2030,14 @@ static void LL_ATON_Start_EpochBlock_7(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
   /* Dma inputs units to cycle: */
   /* Unit= 4 [STREAM_ENG_V2 4] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_24 input ports=0 range=1[0,16000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_24 input ports=0 range=4[0,16000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_24_dma_init_in_0_7 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_24_zero_off_out_52 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_24_zero_off_out_52 */
     .offset_start = 0,
     .offset_limit = 16064,
     .frame_count = 0,
@@ -2095,12 +2093,12 @@ static void LL_ATON_Start_EpochBlock_7(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 16000 */
+  /* cpuRAM2 -> 16000 */
   /* octoFlash -> 576 */
 
   /* Dma output units from cycle: */
   /* Unit= 6 [STREAM_ENG_V2 6] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_28_suboff_60 output ports=0 range=1[16000,32000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_28_suboff_60 output ports=0 range=4[16000,32000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_28_suboff_60_dma_init_out_0_7 = {
     /* to memory canonical from batch=1 */
@@ -2108,7 +2106,7 @@ static void LL_ATON_Start_EpochBlock_7(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_28_zero_off_out_61 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_28_zero_off_out_61 */
     .offset_start = 16000,
     .offset_limit = 32064,
     .frame_count = 0,
@@ -2130,7 +2128,7 @@ static void LL_ATON_Start_EpochBlock_7(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 16000 */
+  /* cpuRAM2 <- 16000 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_7[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 0, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 4, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_24 IN: in unit=CONV_ACC_V2 0 in port=0 out unit=STREAM_ENG_V2 4 out port=0 */
@@ -2506,14 +2504,14 @@ static void LL_ATON_Start_EpochBlock_8(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
   /* Dma inputs units to cycle: */
   /* Unit= 9 [STREAM_ENG_V2 9] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_28 input ports=0 range=1[16000,32000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_28 input ports=0 range=4[16000,32000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_28_dma_init_in_0_8 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_28_zero_off_out_61 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_28_zero_off_out_61 */
     .offset_start = 16000,
     .offset_limit = 32064,
     .frame_count = 0,
@@ -2568,14 +2566,14 @@ static void LL_ATON_Start_EpochBlock_8(const LL_ATON_RT_EpochBlockItem_t *epoch_
   LL_Streng_TensorInit(7, &Conv2D_28_dma_init_in_1_8, 1);
 
   /* Unit= 1 [STREAM_ENG_V2 1] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_28_ca_pipe_1 input ports=0 range=1[16000,32000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_28_ca_pipe_1 input ports=0 range=4[16000,32000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_28_ca_pipe_1_dma_init_in_0_8 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_28_zero_off_out_61_copy_in_41 ca pipe offset=1 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_28_zero_off_out_61_copy_in_41 ca pipe offset=1 */
     .offset_start = 16016,
     .offset_limit = 32064,
     .frame_count = 0,
@@ -2596,14 +2594,14 @@ static void LL_ATON_Start_EpochBlock_8(const LL_ATON_RT_EpochBlockItem_t *epoch_
   LL_Streng_TensorInit(1, &Conv2D_28_ca_pipe_1_dma_init_in_0_8, 1);
 
   /* Unit= 8 [STREAM_ENG_V2 8] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_28_ca_pipe_2 input ports=0 range=1[16000,32000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_28_ca_pipe_2 input ports=0 range=4[16000,32000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_28_ca_pipe_2_dma_init_in_0_8 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_28_zero_off_out_61_copy_in_42 ca pipe offset=2 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_28_zero_off_out_61_copy_in_42 ca pipe offset=2 */
     .offset_start = 16032,
     .offset_limit = 32064,
     .frame_count = 0,
@@ -2624,14 +2622,14 @@ static void LL_ATON_Start_EpochBlock_8(const LL_ATON_RT_EpochBlockItem_t *epoch_
   LL_Streng_TensorInit(8, &Conv2D_28_ca_pipe_2_dma_init_in_0_8, 1);
 
   /* Unit= 3 [STREAM_ENG_V2 3] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_28_ca_pipe_3 input ports=0 range=1[16000,32000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_28_ca_pipe_3 input ports=0 range=4[16000,32000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_28_ca_pipe_3_dma_init_in_0_8 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_28_zero_off_out_61_copy_in_43 ca pipe offset=3 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_28_zero_off_out_61_copy_in_43 ca pipe offset=3 */
     .offset_start = 16048,
     .offset_limit = 32064,
     .frame_count = 0,
@@ -2652,7 +2650,7 @@ static void LL_ATON_Start_EpochBlock_8(const LL_ATON_RT_EpochBlockItem_t *epoch_
   LL_Streng_TensorInit(3, &Conv2D_28_ca_pipe_3_dma_init_in_0_8, 1);
 
   /* Unit= 0 [STREAM_ENG_V2 0] */
-  /* Emit conf for STREAM_ENG_V2 node=Add_31 input ports=0 range=1[40000,48000] */
+  /* Emit conf for STREAM_ENG_V2 node=Add_31 input ports=0 range=4[40000,48000] */
 
   static const LL_Streng_TensorInitTypeDef Add_31_dma_init_in_0_8 = {
     /* from memory with batch=16 */
@@ -2661,7 +2659,7 @@ static void LL_ATON_Start_EpochBlock_8(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_16_off_bias_out_40 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_16_off_bias_out_40 */
     .offset_start = 40000,
     .offset_end = 44000,
     .offset_limit = 48064,
@@ -2684,12 +2682,12 @@ static void LL_ATON_Start_EpochBlock_8(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 24000 */
+  /* cpuRAM2 -> 24000 */
   /* octoFlash -> 2048 */
 
   /* Dma output units from cycle: */
   /* Unit= 6 [STREAM_ENG_V2 6] */
-  /* Emit conf for STREAM_ENG_V2 node=Add_31 output ports=0 range=1[32000,40000] */
+  /* Emit conf for STREAM_ENG_V2 node=Add_31 output ports=0 range=4[32000,40000] */
 
   static const LL_Streng_TensorInitTypeDef Add_31_dma_init_out_0_8 = {
     /* to memory with batch=16 */
@@ -2698,7 +2696,7 @@ static void LL_ATON_Start_EpochBlock_8(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Add_31_out_0 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Add_31_out_0 */
     .offset_start = 32000,
     .offset_end = 36000,
     .offset_limit = 40064,
@@ -2721,7 +2719,7 @@ static void LL_ATON_Start_EpochBlock_8(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 8000 */
+  /* cpuRAM2 <- 8000 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_8[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 3, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 9, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_28 IN: in unit=CONV_ACC_V2 3 in port=0 out unit=STREAM_ENG_V2 9 out port=0 */
@@ -3027,7 +3025,7 @@ static void LL_ATON_Start_EpochBlock_9(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
   /* Dma inputs units to cycle: */
   /* Unit= 0 [STREAM_ENG_V2 0] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_34 input ports=0 range=1[32000,40000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_34 input ports=0 range=4[32000,40000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_34_dma_init_in_0_9 = {
     /* 25x10x16(8 bits) */
@@ -3036,7 +3034,7 @@ static void LL_ATON_Start_EpochBlock_9(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_34_zero_off_out_70 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_34_zero_off_out_70 */
     .offset_start = 32000,
     .offset_end = 36000,
     .offset_limit = 40064,
@@ -3092,7 +3090,7 @@ static void LL_ATON_Start_EpochBlock_9(const LL_ATON_RT_EpochBlockItem_t *epoch_
   LL_Streng_TensorInit(6, &Conv2D_34_dma_init_in_1_9, 1);
 
   /* Unit= 7 [STREAM_ENG_V2 7] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_34_ca_pipe_1 input ports=0 range=1[32000,40000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_34_ca_pipe_1 input ports=0 range=4[32000,40000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_34_ca_pipe_1_dma_init_in_0_9 = {
     /* 25x10x16(8 bits) */
@@ -3101,7 +3099,7 @@ static void LL_ATON_Start_EpochBlock_9(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_34_zero_off_out_70_copy_in_44 ca pipe offset=1 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_34_zero_off_out_70_copy_in_44 ca pipe offset=1 */
     .offset_start = 36000,
     .offset_end = 40000,
     .offset_limit = 40064,
@@ -3124,12 +3122,12 @@ static void LL_ATON_Start_EpochBlock_9(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 32000 */
+  /* cpuRAM2 -> 32000 */
   /* octoFlash -> 2048 */
 
   /* Dma output units from cycle: */
   /* Unit= 2 [STREAM_ENG_V2 2] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_39_suboff_78 output ports=0 range=1[0,16000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_39_suboff_78 output ports=0 range=4[0,16000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_39_suboff_78_dma_init_out_0_9 = {
     /* to memory canonical from batch=16 */
@@ -3137,7 +3135,7 @@ static void LL_ATON_Start_EpochBlock_9(const LL_ATON_RT_EpochBlockItem_t *epoch_
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_39_zero_off_out_79 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_39_zero_off_out_79 */
     .offset_start = 0,
     .offset_limit = 16064,
     .frame_count = 0,
@@ -3159,7 +3157,7 @@ static void LL_ATON_Start_EpochBlock_9(const LL_ATON_RT_EpochBlockItem_t *epoch_
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 16000 */
+  /* cpuRAM2 <- 16000 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_9[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 0, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 0, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_34 IN: in unit=CONV_ACC_V2 0 in port=0 out unit=STREAM_ENG_V2 0 out port=0 */
@@ -3386,7 +3384,7 @@ static void LL_ATON_Start_EpochBlock_10(const LL_ATON_RT_EpochBlockItem_t *epoch
 
   /* Dma inputs units to cycle: */
   /* Unit= 8 [STREAM_ENG_V2 8] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_39 input ports=0 range=1[0,16000] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_39 input ports=0 range=4[0,16000] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_39_dma_init_in_0_10 = {
     .dir = 0,
@@ -3394,7 +3392,7 @@ static void LL_ATON_Start_EpochBlock_10(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_39_zero_off_out_79 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_39_zero_off_out_79 */
     .offset_start = 0,
     .offset_limit = 16064,
     .frame_count = 0,
@@ -3450,12 +3448,12 @@ static void LL_ATON_Start_EpochBlock_10(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 16000 */
+  /* cpuRAM2 -> 16000 */
   /* octoFlash -> 1152 */
 
   /* Dma output units from cycle: */
   /* Unit= 0 [STREAM_ENG_V2 0] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43_suboff_87 output ports=0 range=1[16000,20160] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43_suboff_87 output ports=0 range=4[16000,20160] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_43_suboff_87_dma_init_out_0_10 = {
     /* to memory canonical from batch=2 */
@@ -3463,7 +3461,7 @@ static void LL_ATON_Start_EpochBlock_10(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_43_zero_off_out_88 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_43_zero_off_out_88 */
     .offset_start = 16000,
     .offset_limit = 20224,
     .frame_count = 0,
@@ -3485,7 +3483,7 @@ static void LL_ATON_Start_EpochBlock_10(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 4160 */
+  /* cpuRAM2 <- 4160 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_10[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 2, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 8, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_39 IN: in unit=CONV_ACC_V2 2 in port=0 out unit=STREAM_ENG_V2 8 out port=0 */
@@ -3812,14 +3810,14 @@ static void LL_ATON_Start_EpochBlock_11(const LL_ATON_RT_EpochBlockItem_t *epoch
 
   /* Dma inputs units to cycle: */
   /* Unit= 6 [STREAM_ENG_V2 6] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43 input ports=0 range=1[16000,20160] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43 input ports=0 range=4[16000,20160] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_43_dma_init_in_0_11 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_43_zero_off_out_88 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_43_zero_off_out_88 */
     .offset_start = 16000,
     .offset_limit = 20224,
     .frame_count = 0,
@@ -3874,14 +3872,14 @@ static void LL_ATON_Start_EpochBlock_11(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(5, &Conv2D_43_dma_init_in_1_11, 1);
 
   /* Unit= 2 [STREAM_ENG_V2 2] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43_ca_pipe_1 input ports=0 range=1[16000,20160] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43_ca_pipe_1 input ports=0 range=4[16000,20160] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_43_ca_pipe_1_dma_init_in_0_11 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_43_zero_off_out_88_copy_in_45 ca pipe offset=1 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_43_zero_off_out_88_copy_in_45 ca pipe offset=1 */
     .offset_start = 16016,
     .offset_limit = 20224,
     .frame_count = 0,
@@ -3902,14 +3900,14 @@ static void LL_ATON_Start_EpochBlock_11(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(2, &Conv2D_43_ca_pipe_1_dma_init_in_0_11, 1);
 
   /* Unit= 7 [STREAM_ENG_V2 7] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43_ca_pipe_2 input ports=0 range=1[16000,20160] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43_ca_pipe_2 input ports=0 range=4[16000,20160] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_43_ca_pipe_2_dma_init_in_0_11 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_43_zero_off_out_88_copy_in_46 ca pipe offset=2 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_43_zero_off_out_88_copy_in_46 ca pipe offset=2 */
     .offset_start = 16032,
     .offset_limit = 20224,
     .frame_count = 0,
@@ -3930,14 +3928,14 @@ static void LL_ATON_Start_EpochBlock_11(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(7, &Conv2D_43_ca_pipe_2_dma_init_in_0_11, 1);
 
   /* Unit= 8 [STREAM_ENG_V2 8] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43_ca_pipe_3 input ports=0 range=1[16000,20160] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43_ca_pipe_3 input ports=0 range=4[16000,20160] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_43_ca_pipe_3_dma_init_in_0_11 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_43_zero_off_out_88_copy_in_47 ca pipe offset=3 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_43_zero_off_out_88_copy_in_47 ca pipe offset=3 */
     .offset_start = 16048,
     .offset_limit = 20224,
     .frame_count = 0,
@@ -3959,12 +3957,12 @@ static void LL_ATON_Start_EpochBlock_11(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 4160 */
+  /* cpuRAM2 -> 4160 */
   /* octoFlash -> 4096 */
 
   /* Dma output units from cycle: */
   /* Unit= 0 [STREAM_ENG_V2 0] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43_off_bias_93 output ports=0 range=1[20800,24960] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_43_off_bias_93 output ports=0 range=4[20800,24960] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_43_off_bias_93_dma_init_out_0_11 = {
     /* to memory with batch=16 */
@@ -3973,7 +3971,7 @@ static void LL_ATON_Start_EpochBlock_11(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_43_off_bias_out_94 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_43_off_bias_out_94 */
     .offset_start = 20800,
     .offset_end = 21840,
     .offset_limit = 25024,
@@ -3996,7 +3994,7 @@ static void LL_ATON_Start_EpochBlock_11(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 4160 */
+  /* cpuRAM2 <- 4160 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_11[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 3, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 6, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_43 IN: in unit=CONV_ACC_V2 3 in port=0 out unit=STREAM_ENG_V2 6 out port=0 */
@@ -4398,7 +4396,7 @@ static void LL_ATON_Start_EpochBlock_12(const LL_ATON_RT_EpochBlockItem_t *epoch
 
   /* Dma inputs units to cycle: */
   /* Unit= 2 [STREAM_ENG_V2 2] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_46 input ports=0 range=1[20800,24960] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_46 input ports=0 range=4[20800,24960] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_46_dma_init_in_0_12 = {
     /* 13x5x16(8 bits) */
@@ -4407,7 +4405,7 @@ static void LL_ATON_Start_EpochBlock_12(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_46_zero_off_out_97 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_46_zero_off_out_97 */
     .offset_start = 20800,
     .offset_end = 21840,
     .offset_limit = 25024,
@@ -4463,7 +4461,7 @@ static void LL_ATON_Start_EpochBlock_12(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(4, &Conv2D_46_dma_init_in_1_12, 1);
 
   /* Unit= 1 [STREAM_ENG_V2 1] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_46_ca_pipe_1 input ports=0 range=1[20800,24960] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_46_ca_pipe_1 input ports=0 range=4[20800,24960] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_46_ca_pipe_1_dma_init_in_0_12 = {
     /* 13x5x16(8 bits) */
@@ -4472,7 +4470,7 @@ static void LL_ATON_Start_EpochBlock_12(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_46_zero_off_out_97_copy_in_48 ca pipe offset=1 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_46_zero_off_out_97_copy_in_48 ca pipe offset=1 */
     .offset_start = 21840,
     .offset_end = 22880,
     .offset_limit = 25024,
@@ -4494,7 +4492,7 @@ static void LL_ATON_Start_EpochBlock_12(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(1, &Conv2D_46_ca_pipe_1_dma_init_in_0_12, 1);
 
   /* Unit= 0 [STREAM_ENG_V2 0] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_46_ca_pipe_2 input ports=0 range=1[20800,24960] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_46_ca_pipe_2 input ports=0 range=4[20800,24960] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_46_ca_pipe_2_dma_init_in_0_12 = {
     /* 13x5x16(8 bits) */
@@ -4503,7 +4501,7 @@ static void LL_ATON_Start_EpochBlock_12(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_46_zero_off_out_97_copy_in_49 ca pipe offset=2 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_46_zero_off_out_97_copy_in_49 ca pipe offset=2 */
     .offset_start = 22880,
     .offset_end = 23920,
     .offset_limit = 25024,
@@ -4525,7 +4523,7 @@ static void LL_ATON_Start_EpochBlock_12(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(0, &Conv2D_46_ca_pipe_2_dma_init_in_0_12, 1);
 
   /* Unit= 3 [STREAM_ENG_V2 3] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_46_ca_pipe_3 input ports=0 range=1[20800,24960] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_46_ca_pipe_3 input ports=0 range=4[20800,24960] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_46_ca_pipe_3_dma_init_in_0_12 = {
     /* 13x5x16(8 bits) */
@@ -4534,7 +4532,7 @@ static void LL_ATON_Start_EpochBlock_12(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_46_zero_off_out_97_copy_in_50 ca pipe offset=3 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_46_zero_off_out_97_copy_in_50 ca pipe offset=3 */
     .offset_start = 23920,
     .offset_end = 24960,
     .offset_limit = 25024,
@@ -4557,12 +4555,12 @@ static void LL_ATON_Start_EpochBlock_12(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 4160 */
+  /* cpuRAM2 -> 4160 */
   /* octoFlash -> 8192 */
 
   /* Dma output units from cycle: */
   /* Unit= 6 [STREAM_ENG_V2 6] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_51_suboff_105 output ports=0 range=1[0,8320] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_51_suboff_105 output ports=0 range=4[0,8320] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_51_suboff_105_dma_init_out_0_12 = {
     /* to memory canonical from batch=16 */
@@ -4570,7 +4568,7 @@ static void LL_ATON_Start_EpochBlock_12(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_51_zero_off_out_106 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_51_zero_off_out_106 */
     .offset_start = 0,
     .offset_limit = 8384,
     .frame_count = 0,
@@ -4592,7 +4590,7 @@ static void LL_ATON_Start_EpochBlock_12(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 8320 */
+  /* cpuRAM2 <- 8320 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_12[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 0, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 2, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_46 IN: in unit=CONV_ACC_V2 0 in port=0 out unit=STREAM_ENG_V2 2 out port=0 */
@@ -4839,14 +4837,14 @@ static void LL_ATON_Start_EpochBlock_13(const LL_ATON_RT_EpochBlockItem_t *epoch
 
   /* Dma inputs units to cycle: */
   /* Unit= 2 [STREAM_ENG_V2 2] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_51 input ports=0 range=1[0,8320] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_51 input ports=0 range=4[0,8320] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_51_dma_init_in_0_13 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_51_zero_off_out_106 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_51_zero_off_out_106 */
     .offset_start = 0,
     .offset_limit = 8384,
     .frame_count = 0,
@@ -4902,12 +4900,12 @@ static void LL_ATON_Start_EpochBlock_13(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 8320 */
+  /* cpuRAM2 -> 8320 */
   /* octoFlash -> 1152 */
 
   /* Dma output units from cycle: */
   /* Unit= 5 [STREAM_ENG_V2 5] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_55_suboff_114 output ports=0 range=1[8320,16640] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_55_suboff_114 output ports=0 range=4[8320,16640] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_55_suboff_114_dma_init_out_0_13 = {
     /* to memory canonical from batch=1 */
@@ -4915,7 +4913,7 @@ static void LL_ATON_Start_EpochBlock_13(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_55_zero_off_out_115 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_55_zero_off_out_115 */
     .offset_start = 8320,
     .offset_limit = 16704,
     .frame_count = 0,
@@ -4937,7 +4935,7 @@ static void LL_ATON_Start_EpochBlock_13(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 8320 */
+  /* cpuRAM2 <- 8320 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_13[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 0, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 2, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_51 IN: in unit=CONV_ACC_V2 0 in port=0 out unit=STREAM_ENG_V2 2 out port=0 */
@@ -5154,7 +5152,7 @@ static void LL_ATON_Start_EpochBlock_14(const LL_ATON_RT_EpochBlockItem_t *epoch
 
   /* Dma inputs units to cycle: */
   /* Unit= 3 [STREAM_ENG_V2 3] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_55 input ports=0 range=1[8320,16640] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_55 input ports=0 range=4[8320,16640] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_55_dma_init_in_0_14 = {
     /* 13x5x128(8 bits) */
@@ -5164,7 +5162,7 @@ static void LL_ATON_Start_EpochBlock_14(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_55_zero_off_out_115 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_55_zero_off_out_115 */
     .offset_start = 8320,
     .offset_end = 16642,
     .offset_limit = 16704,
@@ -5220,7 +5218,7 @@ static void LL_ATON_Start_EpochBlock_14(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(5, &Conv2D_55_dma_init_in_1_14, 1);
 
   /* Unit= 6 [STREAM_ENG_V2 6] */
-  /* Emit conf for STREAM_ENG_V2 node=Add_58 input ports=0 range=1[20800,24960] */
+  /* Emit conf for STREAM_ENG_V2 node=Add_58 input ports=0 range=4[20800,24960] */
 
   static const LL_Streng_TensorInitTypeDef Add_58_dma_init_in_0_14 = {
     /* from memory with batch=16 */
@@ -5229,7 +5227,7 @@ static void LL_ATON_Start_EpochBlock_14(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_43_off_bias_out_94 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_43_off_bias_out_94 */
     .offset_start = 20800,
     .offset_end = 21840,
     .offset_limit = 25024,
@@ -5252,12 +5250,12 @@ static void LL_ATON_Start_EpochBlock_14(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 37440 */
+  /* cpuRAM2 -> 37440 */
   /* octoFlash -> 8192 */
 
   /* Dma output units from cycle: */
   /* Unit= 8 [STREAM_ENG_V2 8] */
-  /* Emit conf for STREAM_ENG_V2 node=Add_58 output ports=0 range=1[16640,20800] */
+  /* Emit conf for STREAM_ENG_V2 node=Add_58 output ports=0 range=4[16640,20800] */
 
   static const LL_Streng_TensorInitTypeDef Add_58_dma_init_out_0_14 = {
     /* to memory with batch=16 */
@@ -5266,7 +5264,7 @@ static void LL_ATON_Start_EpochBlock_14(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Add_58_out_0 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Add_58_out_0 */
     .offset_start = 16640,
     .offset_end = 17680,
     .offset_limit = 20864,
@@ -5289,7 +5287,7 @@ static void LL_ATON_Start_EpochBlock_14(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 4160 */
+  /* cpuRAM2 <- 4160 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_14[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 1, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 3, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_55 IN: in unit=CONV_ACC_V2 1 in port=0 out unit=STREAM_ENG_V2 3 out port=0 */
@@ -5669,7 +5667,7 @@ static void LL_ATON_Start_EpochBlock_15(const LL_ATON_RT_EpochBlockItem_t *epoch
 
   /* Dma inputs units to cycle: */
   /* Unit= 0 [STREAM_ENG_V2 0] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_61 input ports=0 range=1[16640,20800] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_61 input ports=0 range=4[16640,20800] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_61_dma_init_in_0_15 = {
     /* 13x5x16(8 bits) */
@@ -5678,7 +5676,7 @@ static void LL_ATON_Start_EpochBlock_15(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_61_zero_off_out_124 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_61_zero_off_out_124 */
     .offset_start = 16640,
     .offset_end = 17680,
     .offset_limit = 20864,
@@ -5734,7 +5732,7 @@ static void LL_ATON_Start_EpochBlock_15(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(2, &Conv2D_61_dma_init_in_1_15, 1);
 
   /* Unit= 4 [STREAM_ENG_V2 4] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_61_ca_pipe_1 input ports=0 range=1[16640,20800] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_61_ca_pipe_1 input ports=0 range=4[16640,20800] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_61_ca_pipe_1_dma_init_in_0_15 = {
     /* 13x5x16(8 bits) */
@@ -5743,7 +5741,7 @@ static void LL_ATON_Start_EpochBlock_15(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_61_zero_off_out_124_copy_in_51 ca pipe offset=1 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_61_zero_off_out_124_copy_in_51 ca pipe offset=1 */
     .offset_start = 17680,
     .offset_end = 18720,
     .offset_limit = 20864,
@@ -5765,7 +5763,7 @@ static void LL_ATON_Start_EpochBlock_15(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(4, &Conv2D_61_ca_pipe_1_dma_init_in_0_15, 1);
 
   /* Unit= 1 [STREAM_ENG_V2 1] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_61_ca_pipe_2 input ports=0 range=1[16640,20800] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_61_ca_pipe_2 input ports=0 range=4[16640,20800] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_61_ca_pipe_2_dma_init_in_0_15 = {
     /* 13x5x16(8 bits) */
@@ -5774,7 +5772,7 @@ static void LL_ATON_Start_EpochBlock_15(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_61_zero_off_out_124_copy_in_52 ca pipe offset=2 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_61_zero_off_out_124_copy_in_52 ca pipe offset=2 */
     .offset_start = 18720,
     .offset_end = 19760,
     .offset_limit = 20864,
@@ -5796,7 +5794,7 @@ static void LL_ATON_Start_EpochBlock_15(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(1, &Conv2D_61_ca_pipe_2_dma_init_in_0_15, 1);
 
   /* Unit= 3 [STREAM_ENG_V2 3] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_61_ca_pipe_3 input ports=0 range=1[16640,20800] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_61_ca_pipe_3 input ports=0 range=4[16640,20800] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_61_ca_pipe_3_dma_init_in_0_15 = {
     /* 13x5x16(8 bits) */
@@ -5805,7 +5803,7 @@ static void LL_ATON_Start_EpochBlock_15(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_61_zero_off_out_124_copy_in_53 ca pipe offset=3 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_61_zero_off_out_124_copy_in_53 ca pipe offset=3 */
     .offset_start = 19760,
     .offset_end = 20800,
     .offset_limit = 20864,
@@ -5828,12 +5826,12 @@ static void LL_ATON_Start_EpochBlock_15(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 4160 */
+  /* cpuRAM2 -> 4160 */
   /* octoFlash -> 8192 */
 
   /* Dma output units from cycle: */
   /* Unit= 9 [STREAM_ENG_V2 9] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_66_suboff_132 output ports=0 range=1[0,8320] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_66_suboff_132 output ports=0 range=4[0,8320] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_66_suboff_132_dma_init_out_0_15 = {
     /* to memory canonical from batch=16 */
@@ -5841,7 +5839,7 @@ static void LL_ATON_Start_EpochBlock_15(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_66_zero_off_out_133 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_66_zero_off_out_133 */
     .offset_start = 0,
     .offset_limit = 8384,
     .frame_count = 0,
@@ -5863,7 +5861,7 @@ static void LL_ATON_Start_EpochBlock_15(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 8320 */
+  /* cpuRAM2 <- 8320 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_15[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 2, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 0, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_61 IN: in unit=CONV_ACC_V2 2 in port=0 out unit=STREAM_ENG_V2 0 out port=0 */
@@ -6110,7 +6108,7 @@ static void LL_ATON_Start_EpochBlock_16(const LL_ATON_RT_EpochBlockItem_t *epoch
 
   /* Dma inputs units to cycle: */
   /* Unit= 2 [STREAM_ENG_V2 2] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_66 input ports=0 range=1[0,8320] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_66 input ports=0 range=4[0,8320] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_66_dma_init_in_0_16 = {
     .dir = 0,
@@ -6118,7 +6116,7 @@ static void LL_ATON_Start_EpochBlock_16(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_66_zero_off_out_133 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_66_zero_off_out_133 */
     .offset_start = 0,
     .offset_limit = 8384,
     .frame_count = 0,
@@ -6174,12 +6172,12 @@ static void LL_ATON_Start_EpochBlock_16(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 8320 */
+  /* cpuRAM2 -> 8320 */
   /* octoFlash -> 2304 */
 
   /* Dma output units from cycle: */
   /* Unit= 5 [STREAM_ENG_V2 5] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_70_suboff_141 output ports=0 range=1[8320,11008] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_70_suboff_141 output ports=0 range=4[8320,11008] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_70_suboff_141_dma_init_out_0_16 = {
     /* to memory canonical from batch=2 */
@@ -6187,7 +6185,7 @@ static void LL_ATON_Start_EpochBlock_16(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_70_zero_off_out_142 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_70_zero_off_out_142 */
     .offset_start = 8320,
     .offset_limit = 11072,
     .frame_count = 0,
@@ -6209,7 +6207,7 @@ static void LL_ATON_Start_EpochBlock_16(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 2688 */
+  /* cpuRAM2 <- 2688 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_16[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 0, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 2, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_66 IN: in unit=CONV_ACC_V2 0 in port=0 out unit=STREAM_ENG_V2 2 out port=0 */
@@ -6377,7 +6375,7 @@ static void LL_ATON_Start_EpochBlock_17(const LL_ATON_RT_EpochBlockItem_t *epoch
 
   /* Dma inputs units to cycle: */
   /* Unit= 3 [STREAM_ENG_V2 3] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_70 input ports=0 range=1[8320,11008] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_70 input ports=0 range=4[8320,11008] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_70_dma_init_in_0_17 = {
     /* 7x3x128(8 bits) */
@@ -6387,7 +6385,7 @@ static void LL_ATON_Start_EpochBlock_17(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 1,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_70_zero_off_out_142 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_70_zero_off_out_142 */
     .offset_start = 8320,
     .offset_end = 11008,
     .offset_limit = 11072,
@@ -6444,12 +6442,12 @@ static void LL_ATON_Start_EpochBlock_17(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 10752 */
+  /* cpuRAM2 -> 10752 */
   /* octoFlash -> 8192 */
 
   /* Dma output units from cycle: */
   /* Unit= 6 [STREAM_ENG_V2 6] */
-  /* Emit conf for STREAM_ENG_V2 node=Conv2D_70_off_bias_147 output ports=0 range=1[0,1344] */
+  /* Emit conf for STREAM_ENG_V2 node=Conv2D_70_off_bias_147 output ports=0 range=4[0,1344] */
 
   static const LL_Streng_TensorInitTypeDef Conv2D_70_off_bias_147_dma_init_out_0_17 = {
     /* to memory canonical from batch=16 */
@@ -6457,7 +6455,7 @@ static void LL_ATON_Start_EpochBlock_17(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_70_off_bias_out_148 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_70_off_bias_out_148 */
     .offset_start = 0,
     .offset_limit = 1408,
     .frame_count = 0,
@@ -6479,7 +6477,7 @@ static void LL_ATON_Start_EpochBlock_17(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 1344 */
+  /* cpuRAM2 <- 1344 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_17[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 1, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 3, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Conv2D_70 IN: in unit=CONV_ACC_V2 1 in port=0 out unit=STREAM_ENG_V2 3 out port=0 */
@@ -6639,7 +6637,7 @@ static void LL_ATON_Start_EpochBlock_18(const LL_ATON_RT_EpochBlockItem_t *epoch
 
   /* Dma inputs units to cycle: */
   /* Unit= 2 [STREAM_ENG_V2 2] */
-  /* Emit conf for STREAM_ENG_V2 node=AveragePool_73 input ports=0 range=1[0,1344] */
+  /* Emit conf for STREAM_ENG_V2 node=AveragePool_73 input ports=0 range=4[0,1344] */
 
   static const LL_Streng_TensorInitTypeDef AveragePool_73_dma_init_in_0_18 = {
     /* memory canonical to batch=8 */
@@ -6647,7 +6645,7 @@ static void LL_ATON_Start_EpochBlock_18(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Conv2D_70_off_bias_out_148 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Conv2D_70_off_bias_out_148 */
     .offset_start = 0,
     .offset_limit = 1408,
     .frame_count = 0,
@@ -6669,11 +6667,11 @@ static void LL_ATON_Start_EpochBlock_18(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 1344 */
+  /* cpuRAM2 -> 1344 */
 
   /* Dma output units from cycle: */
   /* Unit= 8 [STREAM_ENG_V2 8] */
-  /* Emit conf for STREAM_ENG_V2 node=RequantizeLinear_inserted_id364 output ports=0 range=1[1344,1408] */
+  /* Emit conf for STREAM_ENG_V2 node=RequantizeLinear_inserted_id364 output ports=0 range=4[1344,1408] */
 
   static const LL_Streng_TensorInitTypeDef RequantizeLinear_inserted_id364_dma_init_out_0_18 = {
     /* to memory with batch=8 */
@@ -6682,7 +6680,7 @@ static void LL_ATON_Start_EpochBlock_18(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* AveragePool_73_out_0_cp_in_54 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* AveragePool_73_out_0_cp_in_54 */
     .offset_start = 1344,
     .offset_end = 1352,
     .offset_limit = 1472,
@@ -6705,7 +6703,7 @@ static void LL_ATON_Start_EpochBlock_18(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 64 */
+  /* cpuRAM2 <- 64 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_18[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, POOL, 0, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 2, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* AveragePool_73 IN: in unit=POOL_ACC_V2 0 in port=0 out unit=STREAM_ENG_V2 2 out port=0 */
@@ -7024,14 +7022,14 @@ static void LL_ATON_Start_EpochBlock_19(const LL_ATON_RT_EpochBlockItem_t *epoch
 
   /* Dma inputs units to cycle: */
   /* Unit= 6 [STREAM_ENG_V2 6] */
-  /* Emit conf for STREAM_ENG_V2 node=Gemm_75_conv_4 input ports=0 range=1[1344,1408] */
+  /* Emit conf for STREAM_ENG_V2 node=Gemm_75_conv_4 input ports=0 range=4[1344,1408] */
 
   static const LL_Streng_TensorInitTypeDef Gemm_75_conv_4_dma_init_in_0_19 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Gemm_75_conv_4_zero_off_out_151 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Gemm_75_conv_4_zero_off_out_151 */
     .offset_start = 1344,
     .offset_limit = 1472,
     .frame_count = 0,
@@ -7086,14 +7084,14 @@ static void LL_ATON_Start_EpochBlock_19(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(8, &Gemm_75_conv_4_dma_init_in_1_19, 1);
 
   /* Unit= 2 [STREAM_ENG_V2 2] */
-  /* Emit conf for STREAM_ENG_V2 node=Gemm_75_conv_4_ca_pipe_1 input ports=0 range=1[1344,1408] */
+  /* Emit conf for STREAM_ENG_V2 node=Gemm_75_conv_4_ca_pipe_1 input ports=0 range=4[1344,1408] */
 
   static const LL_Streng_TensorInitTypeDef Gemm_75_conv_4_ca_pipe_1_dma_init_in_0_19 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Gemm_75_conv_4_zero_off_out_151_copy_in_55 ca pipe offset=1 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Gemm_75_conv_4_zero_off_out_151_copy_in_55 ca pipe offset=1 */
     .offset_start = 1360,
     .offset_limit = 1472,
     .frame_count = 0,
@@ -7114,14 +7112,14 @@ static void LL_ATON_Start_EpochBlock_19(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(2, &Gemm_75_conv_4_ca_pipe_1_dma_init_in_0_19, 1);
 
   /* Unit= 4 [STREAM_ENG_V2 4] */
-  /* Emit conf for STREAM_ENG_V2 node=Gemm_75_conv_4_ca_pipe_2 input ports=0 range=1[1344,1408] */
+  /* Emit conf for STREAM_ENG_V2 node=Gemm_75_conv_4_ca_pipe_2 input ports=0 range=4[1344,1408] */
 
   static const LL_Streng_TensorInitTypeDef Gemm_75_conv_4_ca_pipe_2_dma_init_in_0_19 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Gemm_75_conv_4_zero_off_out_151_copy_in_56 ca pipe offset=2 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Gemm_75_conv_4_zero_off_out_151_copy_in_56 ca pipe offset=2 */
     .offset_start = 1376,
     .offset_limit = 1472,
     .frame_count = 0,
@@ -7142,14 +7140,14 @@ static void LL_ATON_Start_EpochBlock_19(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Streng_TensorInit(4, &Gemm_75_conv_4_ca_pipe_2_dma_init_in_0_19, 1);
 
   /* Unit= 0 [STREAM_ENG_V2 0] */
-  /* Emit conf for STREAM_ENG_V2 node=Gemm_75_conv_4_ca_pipe_3 input ports=0 range=1[1344,1408] */
+  /* Emit conf for STREAM_ENG_V2 node=Gemm_75_conv_4_ca_pipe_3 input ports=0 range=4[1344,1408] */
 
   static const LL_Streng_TensorInitTypeDef Gemm_75_conv_4_ca_pipe_3_dma_init_in_0_19 = {
     .dir = 0,
     .noblk = 0,
     .align_right = 1,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Gemm_75_conv_4_zero_off_out_151_copy_in_57 ca pipe offset=3 */
+    .addr_base = {(unsigned char *)ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Gemm_75_conv_4_zero_off_out_151_copy_in_57 ca pipe offset=3 */
     .offset_start = 1392,
     .offset_limit = 1472,
     .frame_count = 0,
@@ -7171,12 +7169,12 @@ static void LL_ATON_Start_EpochBlock_19(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma input bandwidth from memory pools: */
-  /* npuRAM5 -> 64 */
+  /* cpuRAM2 -> 64 */
   /* octoFlash -> 64 */
 
   /* Dma output units from cycle: */
   /* Unit= 1 [STREAM_ENG_V2 1] */
-  /* Emit conf for STREAM_ENG_V2 node=Gemm_75_conv_4_off_bias_156 output ports=0 range=1[0,1] */
+  /* Emit conf for STREAM_ENG_V2 node=Gemm_75_conv_4_off_bias_156 output ports=0 range=4[0,1] */
 
   static const LL_Streng_TensorInitTypeDef Gemm_75_conv_4_off_bias_156_dma_init_out_0_19 = {
     /* to memory with batch=1 */
@@ -7185,7 +7183,7 @@ static void LL_ATON_Start_EpochBlock_19(const LL_ATON_RT_EpochBlockItem_t *epoch
     .noblk = 0,
     .align_right = 0,
     .nbits_unsigned = 0,
-    .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */}, /* Gemm_75_conv_4_off_bias_out_157 */
+    .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */}, /* Gemm_75_conv_4_off_bias_out_157 */
     .offset_start = 0,
     .offset_end = 1,
     .offset_limit = 72,
@@ -7208,7 +7206,7 @@ static void LL_ATON_Start_EpochBlock_19(const LL_ATON_RT_EpochBlockItem_t *epoch
 
 
   /* Dma output bandwidth to memory pools: */
-  /* npuRAM5 <- 1 */
+  /* cpuRAM2 <- 1 */
 
   static const LL_Switch_InitTypeDef STREAM_SWITCH_0_init_in_19[] = {
     { LL_Switch_Init_Dest() = ATONN_DSTPORT(STRSWITCH, 0, CONVACC, 2, 0), LL_Switch_Init_Source(0) = ATONN_SRCPORT(STRSWITCH, 0, STRENG, 6, 0), LL_Switch_Init_Context(0) = 1, LL_Switch_Init_Frames(0) = 0, }, /* Gemm_75_conv_4 IN: in unit=CONV_ACC_V2 2 in port=0 out unit=STREAM_ENG_V2 6 out port=0 */
@@ -7231,10 +7229,10 @@ static void LL_ATON_Start_EpochBlock_19(const LL_ATON_RT_EpochBlockItem_t *epoch
   LL_Switch_Init(STREAM_SWITCH_0_init_in_19, 13);
 
   /* *** MCU cache invalidate (only) operation (HW, whole range) *** */
-  /*     memory pool: 1 */
-  /*     start: ((uintptr_t)(ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL + 0))) */
-  /*     end:   ((uintptr_t)(ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL + 32))) */
-  LL_ATON_Cache_MCU_Invalidate_Range(((uintptr_t)(ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x342e0000UL + 0))) /* Equivalent hex address = 0x342e0000UL */, 32);
+  /*     memory pool: 4 */
+  /*     start: ((uintptr_t)(ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL + 0))) */
+  /*     end:   ((uintptr_t)(ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL + 32))) */
+  LL_ATON_Cache_MCU_Invalidate_Range(((uintptr_t)(ATON_LIB_PHYSICAL_TO_VIRTUAL_ADDR(0x34100000UL + 0))) /* Equivalent hex address = 0x34100000UL */, 32);
 
   static const LL_ATON_EnableUnits_InitTypeDef Enable_epoch_19_all_units[] = {
     { {STRENG, 1} }, /* STREAM_ENG_V2 */
@@ -7347,7 +7345,7 @@ const LL_ATON_RT_EpochBlockItem_t *LL_ATON_EpochBlockItems_network(void) {
       .in_streng_mask = 0x00000082,
       .out_streng_mask = 0x00000100,
       .estimated_npu_cycles = 16000,
-      .estimated_tot_cycles = 40000,
+      .estimated_tot_cycles = 80000,
 #endif // LL_ATON_EB_DBG_INFO
     },
     {
@@ -7389,7 +7387,7 @@ const LL_ATON_RT_EpochBlockItem_t *LL_ATON_EpochBlockItems_network(void) {
       .in_streng_mask = 0x00000012,
       .out_streng_mask = 0x00000040,
       .estimated_npu_cycles = 16000,
-      .estimated_tot_cycles = 20000,
+      .estimated_tot_cycles = 40000,
 #endif // LL_ATON_EB_DBG_INFO
     },
     {
@@ -7431,7 +7429,7 @@ const LL_ATON_RT_EpochBlockItem_t *LL_ATON_EpochBlockItems_network(void) {
       .in_streng_mask = 0x00000108,
       .out_streng_mask = 0x00000001,
       .estimated_npu_cycles = 8000,
-      .estimated_tot_cycles = 20000,
+      .estimated_tot_cycles = 40000,
 #endif // LL_ATON_EB_DBG_INFO
     },
     {
@@ -7473,7 +7471,7 @@ const LL_ATON_RT_EpochBlockItem_t *LL_ATON_EpochBlockItems_network(void) {
       .in_streng_mask = 0x0000000c,
       .out_streng_mask = 0x00000020,
       .estimated_npu_cycles = 8320,
-      .estimated_tot_cycles = 10400,
+      .estimated_tot_cycles = 20800,
 #endif // LL_ATON_EB_DBG_INFO
     },
     {
@@ -7515,7 +7513,7 @@ const LL_ATON_RT_EpochBlockItem_t *LL_ATON_EpochBlockItems_network(void) {
       .in_streng_mask = 0x00000204,
       .out_streng_mask = 0x00000020,
       .estimated_npu_cycles = 4160,
-      .estimated_tot_cycles = 13824,
+      .estimated_tot_cycles = 20800,
 #endif // LL_ATON_EB_DBG_INFO
     },
     {
@@ -7683,7 +7681,7 @@ const LL_Buffer_InfoTypeDef *LL_ATON_Input_Buffers_Info_network(void)
   static const LL_Buffer_InfoTypeDef buff_info[] = {
     {
       .name = "Input_0_out_0",
-      .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */},
+      .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */},
       .offset_start = 0,
       .offset_end = 2000,
       .offset_limit = 2064,
@@ -9110,7 +9108,7 @@ const LL_Buffer_InfoTypeDef *LL_ATON_Output_Buffers_Info_network(void)
   static const LL_Buffer_InfoTypeDef buff_info[] = {
     {
       .name = "Quantize_76_out_0",
-      .addr_base = {(unsigned char *)(0x342e0000UL) /* Equivalent hex address = 0x342e0000UL */},
+      .addr_base = {(unsigned char *)(0x34100000UL) /* Equivalent hex address = 0x34100000UL */},
       .offset_start = 0,
       .offset_end = 1,
       .offset_limit = 72,

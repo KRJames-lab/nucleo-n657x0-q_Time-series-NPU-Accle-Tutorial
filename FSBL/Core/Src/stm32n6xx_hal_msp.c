@@ -69,11 +69,10 @@ void HAL_MspInit(void)
 
   /* System interrupt init*/
 
-  HAL_PWREx_EnableVddIO2();
-
+  /* Template canonical: VddIO3 만 enable. VddIO2/4 는 3.3V rail 에 불필요한 부하만 줌 */
+  // HAL_PWREx_EnableVddIO2();
   HAL_PWREx_EnableVddIO3();
-
-  HAL_PWREx_EnableVddIO4();
+  // HAL_PWREx_EnableVddIO4();
 
   /* USER CODE BEGIN MspInit 1 */
 
@@ -183,14 +182,22 @@ void HAL_XSPI_MspInit(XSPI_HandleTypeDef* hxspi)
 	  __HAL_RCC_PWR_CLK_ENABLE();
 	  HAL_PWREx_EnableVddIO3();
 	  HAL_PWREx_ConfigVddIORange(PWR_VDDIO3, PWR_VDDIO_RANGE_1V8);
-	  HAL_SYSCFG_EnableVDDIO3CompensationCell();
+	  /* Template 는 CompensationCell 을 호출하지 않음 — 제거 */
+	  // HAL_SYSCFG_EnableVDDIO3CompensationCell();
 	  __HAL_RCC_XSPI2_CLK_ENABLE();
     /* USER CODE END XSPI2_MspInit 0 */
 
   /** Initializes the peripherals clock
   */
+    /* P2 → 200 MHz 로 되돌림 (Template_FSBL_LRUN canonical 설정):
+       IC3 = PLL1/6 = 1200/6 = 200 MHz.
+       HSLV fuse 가 이미 set (P1 확인) 이므로 1.8V 고속 IO 경로 안전.
+       Macronix MX25UM51245G 의 default OPI DTR dummy=20 cycles 가 200 MHz 용이므로
+       50 MHz 에서는 dummy mismatch 가능성 — 그래서 200 MHz 로 복귀. */
     PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_XSPI2;
-    PeriphClkInitStruct.Xspi2ClockSelection = RCC_XSPI2CLKSOURCE_HCLK;
+    PeriphClkInitStruct.Xspi2ClockSelection  = RCC_XSPI2CLKSOURCE_IC3;
+    PeriphClkInitStruct.ICSelection[RCC_IC3].ClockSelection = RCC_ICCLKSOURCE_PLL1;
+    PeriphClkInitStruct.ICSelection[RCC_IC3].ClockDivider  = 6;   /* 1200/6 = 200 MHz */
     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
     {
       Error_Handler();

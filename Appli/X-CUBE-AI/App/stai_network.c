@@ -628,7 +628,7 @@ static const stai_network_info __stai_network_network_info = {
     .n_weights = STAI_NETWORK_WEIGHTS_NUM,
     .n_states = STAI_NETWORK_STATES_NUM,
 
-    .c_model_datetime = "2026-04-22 12:34:26",
+    .c_model_datetime = "2026-04-24 16:31:21",
 
     .n_nodes = 67,
 

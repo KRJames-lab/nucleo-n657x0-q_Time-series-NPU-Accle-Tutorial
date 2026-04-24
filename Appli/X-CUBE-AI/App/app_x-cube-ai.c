@@ -17,16 +17,25 @@
 #include "ll_aton_runtime.h"
 #include "ll_aton_rt_user_api.h"
 #include "ll_aton_caches_interface.h"
+#include "npu_cache.h"
 
 void MX_X_CUBE_AI_Init(void)
 {
-    /* SRAM2~6 AXI 파워다운 해제
-       (activations 버퍼가 npuRAM5(SRAM5) 를 사용하므로 필수) */
+    /* NPU 와 CACHEAXI peripheral clock enable + reset 해제 */
+    __HAL_RCC_NPU_CLK_ENABLE();
+    __HAL_RCC_CACHEAXI_CLK_ENABLE();
+    __HAL_RCC_NPU_FORCE_RESET();
+    __HAL_RCC_NPU_RELEASE_RESET();
+
+    /* activations 는 cpuRAM2 로 이동했지만 npuRAM 도 안전하게 파워온 유지 */
     RAMCFG_SRAM2_AXI->CR &= ~RAMCFG_CR_SRAMSD;
     RAMCFG_SRAM3_AXI->CR &= ~RAMCFG_CR_SRAMSD;
     RAMCFG_SRAM4_AXI->CR &= ~RAMCFG_CR_SRAMSD;
     RAMCFG_SRAM5_AXI->CR &= ~RAMCFG_CR_SRAMSD;
     RAMCFG_SRAM6_AXI->CR &= ~RAMCFG_CR_SRAMSD;
+
+    /* CACHEAXI handle init + enable — LL_ATON_Cache_NPU_* API 의 assert 통과 필수 */
+    npu_cache_enable();
 }
 
 /* 네트워크 c-name 은 "network" (stai_network.c 의 매크로 호출 참고).
@@ -55,11 +64,10 @@ static void fill_input_from_window(const float voltage[1000],
                                    const float vibration[1000],
                                    int8_t *buf_in)
 {
-    /* TFLite 변환 노트 §3(F): 모델 입력은 NHWC (H=20, W=50, C=2) */
     for (int h = 0; h < 20; ++h) {
         for (int w = 0; w < 50; ++w) {
-            int t = h * 50 + w;              /* 1D index */
-            int idx = (h * 50 + w) * 2;      /* NHWC linear */
+            int t = h * 50 + w;
+            int idx = (h * 50 + w) * 2;
             buf_in[idx + 0] = quantize(voltage[t]);
             buf_in[idx + 1] = quantize(vibration[t]);
         }
@@ -79,53 +87,51 @@ void MX_X_CUBE_AI_Process(void)
     /* USER CODE BEGIN 6 */
     LL_ATON_RT_RetValues_t rc = LL_ATON_RT_DONE;
 
+    BSP_LED_Off(LED_BLUE);
+    BSP_LED_Off(LED_GREEN);
+    HAL_Delay(1500);
+
+    /* ST 템플릿 순서: RuntimeInit → Init_Network(한 번) → buffer info */
+    LL_ATON_RT_RuntimeInit();
+    LL_ATON_RT_Init_Network(&NN_Instance_network);
+
     const LL_Buffer_InfoTypeDef *ib = NN_Interface_network.input_buffers_info();
     const LL_Buffer_InfoTypeDef *ob = NN_Interface_network.output_buffers_info();
 
     int8_t *buf_in  = (int8_t *)LL_Buffer_addr_start(&ib[0]);
     int8_t *buf_out = (int8_t *)LL_Buffer_addr_start(&ob[0]);
-    buff_in_len  = ib[0].offset_end - ib[0].offset_start;   /* 2000 bytes */
-    buff_out_len = ob[0].offset_end - ob[0].offset_start;   /* 1 byte */
+    buff_in_len  = ib[0].offset_end - ib[0].offset_start;
+    buff_out_len = ob[0].offset_end - ob[0].offset_start;
 
-    printf("Input  buf = %lu bytes\r\n", buff_in_len);
-    printf("Output buf = %lu bytes\r\n", buff_out_len);
+    printf("Input  buf = %lu bytes @ %p\r\n", buff_in_len, (void*)buf_in);
+    printf("Output buf = %lu bytes @ %p\r\n", buff_out_len, (void*)buf_out);
 
-    LL_ATON_RT_RuntimeInit();
+    static float volt_win[1000], vib_win[1000];
 
-    float volt_win[1000], vib_win[1000];
+    BSP_LED_On(LED_GREEN);
 
     while (1) {
-        /* 1) 센서 10초 윈도우 수집 (외부 함수) */
         acquire_window(volt_win, vib_win);
-
-        /* 2) 양자화 + 버퍼 채우기 */
         fill_input_from_window(volt_win, vib_win, buf_in);
 
-        /* 3) 캐시 동기화 — MCU 쪽 최신 데이터를 메모리에 내려쓰고 NPU 캐시 무효화.
-           함수 인자는 (시작 주소 uintptr_t, 길이[바이트]). end 주소가 아닙니다.
-           N6 NPU 캐시는 pure invalidate 가 없고 clean-invalidate 묶음만 제공합니다. */
         LL_ATON_Cache_MCU_Clean_Invalidate_Range((uintptr_t)buf_in, buff_in_len);
         LL_ATON_Cache_NPU_Clean_Invalidate_Range((uintptr_t)buf_in, buff_in_len);
 
-        /* 4) 추론 */
-        LL_ATON_RT_Init_Network(&NN_Instance_network);
+        /* Busy-poll — NPU 완료 IRQ 가 NVIC 에 enable 되어 있지 않아
+           LL_ATON_OSAL_WFE() 를 쓰면 영원히 깨지 못함. IRQ 경로를 활성화할
+           때까지 polling 유지. */
         do {
             rc = LL_ATON_RT_RunEpochBlock(&NN_Instance_network);
-            if (rc == LL_ATON_RT_WFE) LL_ATON_OSAL_WFE();
         } while (rc != LL_ATON_RT_DONE);
 
-        /* 5) MCU가 출력 버퍼를 읽기 전에 invalidate (NPU가 최근에 쓴 결과가
-           MCU 캐시에 반영되도록 함). 인자는 (시작 주소 uintptr_t, 길이). */
         LL_ATON_Cache_MCU_Invalidate_Range((uintptr_t)buf_out, buff_out_len);
 
-        /* 6) int8 로짓 → float 환산·결정 */
         int8_t logit_q = buf_out[0];
         float  logit_f = OUT_SCALE * (float)(logit_q - OUT_ZP);
         int    isc_detected = (logit_f > 0.0f) ? 1 : 0;
         printf("logit=%.4f  ISC=%d\r\n", logit_f, isc_detected);
 
-        LL_ATON_RT_DeInit_Network(&NN_Instance_network);
-        BSP_LED_Toggle(LED_BLUE);  /* DIAG: inference cycle completed */
+        BSP_LED_Toggle(LED_BLUE);
         HAL_Delay(200);
     }
     /* USER CODE END 6 */

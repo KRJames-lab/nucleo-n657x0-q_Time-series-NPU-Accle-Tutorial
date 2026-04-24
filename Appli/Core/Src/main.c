@@ -20,6 +20,7 @@
 #include "main.h"
 #include "app_x-cube-ai.h"
 #include "stm32n6xx_nucleo.h"
+#include <stdio.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -98,11 +99,13 @@ int main(void)
   MX_GPIO_Init();
   MX_RAMCFG_Init();
   MX_LPUART1_UART_Init();
-  MX_XSPI2_Init();
+  /* MX_XSPI2_Init 은 Appli 에서 재호출하지 않음 — FSBL 이 mem-mapped 상태로 넘겨줌. */
   MX_X_CUBE_AI_Init();
   SystemIsolation_Config();
-  /* USER CODE BEGIN 2 */
 
+  /* USER CODE BEGIN 2 */
+  BSP_LED_Init(LED_BLUE);
+  BSP_LED_Init(LED_GREEN);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -264,9 +267,16 @@ static void MX_RAMCFG_Init(void)
   HAL_GPIO_ConfigPinAttributes(GPIOH,GPIO_PIN_9,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
 
   /* USER CODE BEGIN RIF_Init 1 */
+  /* NPU slave + master 권한. 활성 배치는 Secure state 에서만 유효하지만
+     구조 자체는 유지 (향후 TrustZone 흐름 진입 시 그대로 쓰임). */
   HAL_RIF_RISC_SetSlaveSecureAttributes(
       RIF_RISC_PERIPH_INDEX_NPU,
       RIF_ATTRIBUTE_PRIV | RIF_ATTRIBUTE_SEC);
+
+  RIMC_MasterConfig_t npu_master = {0};
+  npu_master.MasterCID = RIF_CID_1;
+  npu_master.SecPriv = RIF_ATTRIBUTE_SEC | RIF_ATTRIBUTE_PRIV;
+  HAL_RIF_RIMC_ConfigMasterAttributes(RIF_MASTER_INDEX_NPU, &npu_master);
   /* USER CODE END RIF_Init 1 */
   /* USER CODE BEGIN RIF_Init 2 */
 
@@ -349,11 +359,13 @@ static void MX_GPIO_Init(void)
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
 
 PUTCHAR_PROTOTYPE {
-    HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, 0xFFFF);
+    /* 짧은 timeout — VCP 미연결/drain 되지 않는 상황에서도 block 방지 */
+    HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, 10);
     return ch;
 }
 int _write(int fd, char *ptr, int len) {
-    HAL_UART_Transmit(&hlpuart1, (uint8_t *)ptr, len, HAL_MAX_DELAY);
+    /* HAL_MAX_DELAY 대신 10ms — UART 가 밀리면 drop 해도 Appli 계속 진행 */
+    HAL_UART_Transmit(&hlpuart1, (uint8_t *)ptr, len, 10);
     return len;
 }
 /* USER CODE END 4 */

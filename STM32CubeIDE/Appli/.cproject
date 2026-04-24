@@ -201,4 +201,5 @@
 			<resource resourceType="PROJECT" workspacePath="/NPU_Accel_Tutorial_Appli"/>
 		</configuration>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>

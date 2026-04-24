@@ -22,7 +22,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Input_0_out_0",
       "nbits": 8,
       "offset_start": 0,
@@ -62,7 +62,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Quantize_76_out_0",
       "nbits": 8,
       "offset_start": 0,
@@ -100,7 +100,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Transpose_1_out_0",
       "nbits": 8,
       "offset_start": 0,
@@ -140,7 +140,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_7_zero_off_out_16",
       "nbits": 8,
       "offset_start": 32000,
@@ -180,7 +180,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_12_zero_off_out_25",
       "nbits": 8,
       "offset_start": 0,
@@ -220,7 +220,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_16_zero_off_out_34",
       "nbits": 8,
       "offset_start": 32000,
@@ -260,7 +260,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_16_off_bias_out_40",
       "nbits": 8,
       "offset_start": 40000,
@@ -300,7 +300,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_24_zero_off_out_52",
       "nbits": 8,
       "offset_start": 0,
@@ -340,7 +340,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_28_zero_off_out_61",
       "nbits": 8,
       "offset_start": 16000,
@@ -380,7 +380,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Add_31_out_0",
       "nbits": 8,
       "offset_start": 32000,
@@ -420,7 +420,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_39_zero_off_out_79",
       "nbits": 8,
       "offset_start": 0,
@@ -460,7 +460,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_43_zero_off_out_88",
       "nbits": 8,
       "offset_start": 16000,
@@ -500,7 +500,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_43_off_bias_out_94",
       "nbits": 8,
       "offset_start": 20800,
@@ -540,7 +540,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_51_zero_off_out_106",
       "nbits": 8,
       "offset_start": 0,
@@ -580,7 +580,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_55_zero_off_out_115",
       "nbits": 8,
       "offset_start": 8320,
@@ -620,7 +620,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Add_58_out_0",
       "nbits": 8,
       "offset_start": 16640,
@@ -660,7 +660,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_66_zero_off_out_133",
       "nbits": 8,
       "offset_start": 0,
@@ -700,7 +700,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_70_zero_off_out_142",
       "nbits": 8,
       "offset_start": 8320,
@@ -740,7 +740,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Conv2D_70_off_bias_out_148",
       "nbits": 8,
       "offset_start": 0,
@@ -780,7 +780,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "AveragePool_73_out_0_cp_in_54",
       "nbits": 8,
       "offset_start": 1344,
@@ -820,7 +820,7 @@
         ]
       },
       "is_param": false,
-      "mpool_id": 2,
+      "mpool_id": 5,
       "name": "Gemm_75_conv_4_off_bias_out_157",
       "nbits": 8,
       "offset_start": 0,
@@ -5124,7 +5124,7 @@
   "ec_blobs_info": [],
   "environment": {
     "generated_model": {
-      "generated_time": "2026-04-22T03:34:26.378036900+0000",
+      "generated_time": "2026-04-24T07:31:20.973655200+0000",
       "model_files": [
         {
           "name": "network.c",
@@ -5172,12 +5172,12 @@
       "size": 0,
       "type": ""
     },
-    "network_signature": "0xb427b679cefebafb",
+    "network_signature": "0xe66d023fb0ba2bd4",
     "target": "",
     "test_name": "",
     "tools": [
       {
-        "arguments": "generate -m .\\n6_work\\npu_conv2d.tflite --target stm32n6 --st-neural-art --output .\\n6_work\\cubemx\\NPU_Accel_Tutorial\\Appli\\X-CUBE-AI\\App",
+        "arguments": "generate -m D:/01_Projects/05_Ship_Battery(Sub)/n6_work/npu_conv2d.tflite --target stm32n6 --st-neural-art --output D:/01_Projects/05_Ship_Battery(Sub)/n6_work/cubemx/NPU_Accel_Tutorial/Appli/X-CUBE-AI/App --workspace D:/01_Projects/05_Ship_Battery(Sub)/st_ai_ws",
         "environment": [],
         "input_model": {
           "generated_time": "",
@@ -5199,7 +5199,7 @@
         "arguments": " -i D:\\01_Projects\\05_Ship_Battery(Sub)\\n6_work\\cubemx\\NPU_Accel_Tutorial\\Appli\\X-CUBE-AI\\App\\npu_conv2d_OE_3_3_1.onnx --json-quant-file D:\\01_Projects\\05_Ship_Battery(Sub)\\n6_work\\cubemx\\NPU_Accel_Tutorial\\Appli\\X-CUBE-AI\\App\\npu_conv2d_OE_3_3_1_Q.json -g network.c --load-mdesc C:\\ST\\STEdgeAI\\4.0\\Utilities\\configs\\stm32n6.mdesc --load-mpool C:\\ST\\STEdgeAI\\4.0\\Utilities\\windows\\targets\\stm32\\resources\\NPU\\STM32N6xx\\stm32n6.mpool --load-cdesc C:\\ST\\STEdgeAI\\4.0\\Utilities\\configs\\cortex-m55.cdesc --save-mpool-file D:\\01_Projects\\05_Ship_Battery(Sub)\\st_ai_ws\\neural_art__network\\stm32n6.mpool --out-dir-prefix D:\\01_Projects\\05_Ship_Battery(Sub)\\st_ai_ws\\neural_art__network/ --network-name network --native-float --cache-maintenance --Ocache-opt --enable-virtual-mem-pools --Os --Oauto-sched --output-info-file c_info.json --generate-stai",
         "environment": [],
         "input_model": {
-          "generated_time": "2026-04-22T12:34:26+0900",
+          "generated_time": "2026-04-24T16:31:20+0900",
           "model_files": [
             {
               "name": "npu_conv2d_OE_3_3_1.onnx",
@@ -10871,6 +10871,14 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 1,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 1,
       "read_cycles": 0,
@@ -10888,14 +10896,6 @@
     },
     {
       "mpool_id": 4,
-      "node_id": 1,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
-      "mpool_id": 1,
       "node_id": 1,
       "read_cycles": 0,
       "reads": 0,
@@ -10943,6 +10943,14 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 65,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 65,
       "read_cycles": 0,
@@ -10960,14 +10968,6 @@
     },
     {
       "mpool_id": 4,
-      "node_id": 65,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
-      "mpool_id": 1,
       "node_id": 65,
       "read_cycles": 0,
       "reads": 0,
@@ -11015,12 +11015,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 67,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 67,
-      "read_cycles": 312,
-      "reads": 2000,
-      "write_cycles": 5000,
-      "writes": 16000
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11039,20 +11047,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 67,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 67,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 625,
+      "reads": 2000,
+      "write_cycles": 10000,
+      "writes": 16000
     },
     {
       "mpool_id": 6,
@@ -11087,12 +11087,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 71,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 71,
-      "read_cycles": 5000,
-      "reads": 32000,
-      "write_cycles": 5000,
-      "writes": 32000
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11111,20 +11119,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 71,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 71,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 10000,
+      "reads": 32000,
+      "write_cycles": 10000,
+      "writes": 32000
     },
     {
       "mpool_id": 6,
@@ -11159,12 +11159,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 75,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 75,
-      "read_cycles": 40000,
-      "reads": 32000,
-      "write_cycles": 5000,
-      "writes": 8000
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11183,20 +11191,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 75,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 75,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 80000,
+      "reads": 32000,
+      "write_cycles": 10000,
+      "writes": 8000
     },
     {
       "mpool_id": 6,
@@ -11231,12 +11231,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 79,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 79,
-      "read_cycles": 750,
-      "reads": 8000,
-      "write_cycles": 1250,
-      "writes": 8000
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11255,20 +11263,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 79,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 79,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 1500,
+      "reads": 8000,
+      "write_cycles": 2500,
+      "writes": 8000
     },
     {
       "mpool_id": 6,
@@ -11303,12 +11303,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 83,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 83,
-      "read_cycles": 5000,
-      "reads": 32000,
-      "write_cycles": 2500,
-      "writes": 16000
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11327,20 +11335,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 83,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 83,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 10000,
+      "reads": 32000,
+      "write_cycles": 5000,
+      "writes": 16000
     },
     {
       "mpool_id": 6,
@@ -11375,12 +11375,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 88,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 88,
-      "read_cycles": 20000,
-      "reads": 16000,
-      "write_cycles": 20000,
-      "writes": 16000
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11399,20 +11407,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 88,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 88,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 40000,
+      "reads": 16000,
+      "write_cycles": 40000,
+      "writes": 16000
     },
     {
       "mpool_id": 6,
@@ -11447,46 +11447,46 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 92,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 92,
-      "read_cycles": 2750,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 92,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 92,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 92,
+      "read_cycles": 5500,
       "reads": 24000,
-      "write_cycles": 1250,
+      "write_cycles": 2500,
       "writes": 8000
     },
     {
-      "mpool_id": 3,
-      "node_id": 92,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
-      "mpool_id": 4,
-      "node_id": 92,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
-      "mpool_id": 1,
-      "node_id": 92,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
-      "mpool_id": 5,
-      "node_id": 92,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 6,
       "node_id": 92,
       "read_cycles": 0,
@@ -11519,12 +11519,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 99,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 99,
-      "read_cycles": 5000,
-      "reads": 32000,
-      "write_cycles": 2500,
-      "writes": 16000
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11543,20 +11551,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 99,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 99,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 10000,
+      "reads": 32000,
+      "write_cycles": 5000,
+      "writes": 16000
     },
     {
       "mpool_id": 6,
@@ -11591,12 +11591,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 104,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 104,
-      "read_cycles": 20000,
-      "reads": 16000,
-      "write_cycles": 2600,
-      "writes": 4160
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11615,20 +11623,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 104,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 104,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 40000,
+      "reads": 16000,
+      "write_cycles": 5200,
+      "writes": 4160
     },
     {
       "mpool_id": 6,
@@ -11663,12 +11663,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 108,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 108,
-      "read_cycles": 388,
-      "reads": 4160,
-      "write_cycles": 650,
-      "writes": 4160
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11687,20 +11695,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 108,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 108,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 780,
+      "reads": 4160,
+      "write_cycles": 1300,
+      "writes": 4160
     },
     {
       "mpool_id": 6,
@@ -11735,12 +11735,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 114,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 114,
-      "read_cycles": 648,
-      "reads": 4160,
-      "write_cycles": 1300,
-      "writes": 8320
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11759,20 +11767,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 114,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 114,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 1300,
+      "reads": 4160,
+      "write_cycles": 2600,
+      "writes": 8320
     },
     {
       "mpool_id": 6,
@@ -11807,12 +11807,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 121,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 121,
-      "read_cycles": 10400,
-      "reads": 8320,
-      "write_cycles": 10400,
-      "writes": 8320
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11831,20 +11839,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 121,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 121,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 20800,
+      "reads": 8320,
+      "write_cycles": 20800,
+      "writes": 8320
     },
     {
       "mpool_id": 6,
@@ -11879,12 +11879,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 125,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 125,
-      "read_cycles": 2383,
-      "reads": 37440,
-      "write_cycles": 650,
-      "writes": 4160
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11903,20 +11911,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 125,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 125,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 4766,
+      "reads": 37440,
+      "write_cycles": 1300,
+      "writes": 4160
     },
     {
       "mpool_id": 6,
@@ -11951,12 +11951,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 129,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 129,
-      "read_cycles": 648,
-      "reads": 4160,
-      "write_cycles": 1300,
-      "writes": 8320
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -11975,20 +11983,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 129,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 129,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 1300,
+      "reads": 4160,
+      "write_cycles": 2600,
+      "writes": 8320
     },
     {
       "mpool_id": 6,
@@ -12023,12 +12023,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 136,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 136,
-      "read_cycles": 10400,
-      "reads": 8320,
-      "write_cycles": 1680,
-      "writes": 2688
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -12047,20 +12055,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 136,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 136,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 20800,
+      "reads": 8320,
+      "write_cycles": 3360,
+      "writes": 2688
     },
     {
       "mpool_id": 6,
@@ -12095,12 +12095,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 140,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 140,
-      "read_cycles": 560,
-      "reads": 10752,
-      "write_cycles": 210,
-      "writes": 1344
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -12119,20 +12127,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 140,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 140,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 1120,
+      "reads": 10752,
+      "write_cycles": 420,
+      "writes": 1344
     },
     {
       "mpool_id": 6,
@@ -12167,12 +12167,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 143,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 143,
-      "read_cycles": 210,
-      "reads": 1344,
-      "write_cycles": 10,
-      "writes": 64
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -12191,20 +12199,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 143,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 143,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
+      "read_cycles": 420,
+      "reads": 1344,
+      "write_cycles": 20,
+      "writes": 64
     },
     {
       "mpool_id": 6,
@@ -12239,12 +12239,20 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 146,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 146,
-      "read_cycles": 4,
-      "reads": 64,
+      "read_cycles": 0,
+      "reads": 0,
       "write_cycles": 0,
-      "writes": 1
+      "writes": 0
     },
     {
       "mpool_id": 3,
@@ -12263,20 +12271,12 @@
       "writes": 0
     },
     {
-      "mpool_id": 1,
-      "node_id": 146,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
       "mpool_id": 5,
       "node_id": 146,
-      "read_cycles": 0,
-      "reads": 0,
+      "read_cycles": 12,
+      "reads": 64,
       "write_cycles": 0,
-      "writes": 0
+      "writes": 1
     },
     {
       "mpool_id": 6,
@@ -12311,6 +12311,14 @@
       "writes": 0
     },
     {
+      "mpool_id": 1,
+      "node_id": 153,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
       "mpool_id": 2,
       "node_id": 153,
       "read_cycles": 0,
@@ -12328,14 +12336,6 @@
     },
     {
       "mpool_id": 4,
-      "node_id": 153,
-      "read_cycles": 0,
-      "reads": 0,
-      "write_cycles": 0,
-      "writes": 0
-    },
-    {
-      "mpool_id": 1,
       "node_id": 153,
       "read_cycles": 0,
       "reads": 0,
@@ -12406,7 +12406,7 @@
       "persistent": true,
       "pipelined": "PIPELINED_ON",
       "rights": "ACC_WRITE",
-      "size_bytes": 458752,
+      "size_bytes": 0,
       "subpools": [],
       "used_size_bytes": 0,
       "user_allocated": false
@@ -12426,29 +12426,7 @@
         "use_for_initrs": false,
         "write_power": 16.201
       },
-      "buffers": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21
-      ],
+      "buffers": [],
       "cacheable": "CACHEABLE_OFF",
       "fname": "atonbuf.AXISRAM5.raw",
       "id": 2,
@@ -12457,9 +12435,9 @@
       "persistent": true,
       "pipelined": "PIPELINED_ON",
       "rights": "ACC_WRITE",
-      "size_bytes": 458752,
+      "size_bytes": 0,
       "subpools": [],
-      "used_size_bytes": 48000,
+      "used_size_bytes": 0,
       "user_allocated": false
     },
     {
@@ -12486,7 +12464,7 @@
       "persistent": true,
       "pipelined": "PIPELINED_ON",
       "rights": "ACC_WRITE",
-      "size_bytes": 458752,
+      "size_bytes": 0,
       "subpools": [],
       "used_size_bytes": 0,
       "user_allocated": false
@@ -12515,7 +12493,7 @@
       "persistent": true,
       "pipelined": "PIPELINED_ON",
       "rights": "ACC_WRITE",
-      "size_bytes": 458752,
+      "size_bytes": 0,
       "subpools": [],
       "used_size_bytes": 0,
       "user_allocated": false
@@ -12535,7 +12513,29 @@
         "use_for_initrs": false,
         "write_power": 15.321
       },
-      "buffers": [],
+      "buffers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
       "cacheable": "CACHEABLE_OFF",
       "fname": "atonbuf.AXISRAM2.raw",
       "id": 5,
@@ -12546,7 +12546,7 @@
       "rights": "ACC_WRITE",
       "size_bytes": 1048576,
       "subpools": [],
-      "used_size_bytes": 0,
+      "used_size_bytes": 48000,
       "user_allocated": false
     },
     {
@@ -12727,41 +12727,6 @@
       "subpools": [],
       "used_size_bytes": 57505,
       "user_allocated": false
-    },
-    {
-      "address": "873463808",
-      "alignment": 8,
-      "attributes": {
-        "burst_max_length": 4294967295,
-        "burst_penalty": 0,
-        "byte_width": 8,
-        "freq_ratio": 1.25,
-        "latency": "MID",
-        "read_power": 19.006,
-        "score": 91,
-        "throughput": "HIGH",
-        "use_for_initrs": false,
-        "write_power": 16.201
-      },
-      "buffers": [],
-      "cacheable": "CACHEABLE_OFF",
-      "fname": "",
-      "id": 10,
-      "name": "cpuRAM2_npuRAM3_npuRAM4_npuRAM5_npuRAM6",
-      "offset_start": 0,
-      "persistent": true,
-      "pipelined": "PIPELINED_ON",
-      "rights": "ACC_WRITE",
-      "size_bytes": 2883584,
-      "subpools": [
-        5,
-        4,
-        3,
-        2,
-        1
-      ],
-      "used_size_bytes": 2014080,
-      "user_allocated": false
     }
   ],
   "power_estimates": [
@@ -12782,7 +12747,7 @@
       "ops": 0
     },
     {
-      "average_acc_power_mw": 42,
+      "average_acc_power_mw": 46,
       "average_memory_power_mw": 8,
       "compute_cycles": 16000,
       "max_cycles": 16000,
@@ -12790,23 +12755,23 @@
       "ops": 608000
     },
     {
-      "average_acc_power_mw": 24,
-      "average_memory_power_mw": 12,
+      "average_acc_power_mw": 28,
+      "average_memory_power_mw": 11,
       "compute_cycles": 32000,
       "max_cycles": 32000,
       "node_id": 71,
       "ops": 1088000
     },
     {
-      "average_acc_power_mw": 55,
-      "average_memory_power_mw": 19,
+      "average_acc_power_mw": 85,
+      "average_memory_power_mw": 18,
       "compute_cycles": 16000,
-      "max_cycles": 40000,
+      "max_cycles": 80000,
       "node_id": 75,
       "ops": 304000
     },
     {
-      "average_acc_power_mw": 41,
+      "average_acc_power_mw": 44,
       "average_memory_power_mw": 36,
       "compute_cycles": 8000,
       "max_cycles": 8000,
@@ -12814,55 +12779,55 @@
       "ops": 520000
     },
     {
-      "average_acc_power_mw": 59,
-      "average_memory_power_mw": 41,
+      "average_acc_power_mw": 64,
+      "average_memory_power_mw": 40,
       "compute_cycles": 16000,
       "max_cycles": 16000,
       "node_id": 83,
       "ops": 1056000
     },
     {
-      "average_acc_power_mw": 52,
+      "average_acc_power_mw": 78,
       "average_memory_power_mw": 16,
       "compute_cycles": 16000,
-      "max_cycles": 20000,
+      "max_cycles": 40000,
       "node_id": 88,
       "ops": 320000
     },
     {
-      "average_acc_power_mw": 79,
-      "average_memory_power_mw": 74,
+      "average_acc_power_mw": 84,
+      "average_memory_power_mw": 73,
       "compute_cycles": 8000,
       "max_cycles": 12288,
       "node_id": 92,
       "ops": 1040000
     },
     {
-      "average_acc_power_mw": 59,
-      "average_memory_power_mw": 41,
+      "average_acc_power_mw": 64,
+      "average_memory_power_mw": 40,
       "compute_cycles": 16000,
       "max_cycles": 16000,
       "node_id": 99,
       "ops": 1056000
     },
     {
-      "average_acc_power_mw": 62,
-      "average_memory_power_mw": 43,
+      "average_acc_power_mw": 92,
+      "average_memory_power_mw": 42,
       "compute_cycles": 8000,
-      "max_cycles": 20000,
+      "max_cycles": 40000,
       "node_id": 104,
       "ops": 158080
     },
     {
-      "average_acc_power_mw": 121,
-      "average_memory_power_mw": 225,
+      "average_acc_power_mw": 124,
+      "average_memory_power_mw": 224,
       "compute_cycles": 4160,
       "max_cycles": 24576,
       "node_id": 108,
       "ops": 536640
     },
     {
-      "average_acc_power_mw": 150,
+      "average_acc_power_mw": 153,
       "average_memory_power_mw": 222,
       "compute_cycles": 8320,
       "max_cycles": 49152,
@@ -12870,23 +12835,23 @@
       "ops": 1081600
     },
     {
-      "average_acc_power_mw": 58,
-      "average_memory_power_mw": 39,
+      "average_acc_power_mw": 85,
+      "average_memory_power_mw": 38,
       "compute_cycles": 8320,
-      "max_cycles": 10400,
+      "max_cycles": 20800,
       "node_id": 121,
       "ops": 166400
     },
     {
-      "average_acc_power_mw": 38,
-      "average_memory_power_mw": 179,
+      "average_acc_power_mw": 41,
+      "average_memory_power_mw": 178,
       "compute_cycles": 11094,
       "max_cycles": 49152,
       "node_id": 125,
       "ops": 1073280
     },
     {
-      "average_acc_power_mw": 150,
+      "average_acc_power_mw": 153,
       "average_memory_power_mw": 222,
       "compute_cycles": 8320,
       "max_cycles": 49152,
@@ -12894,23 +12859,23 @@
       "ops": 1081600
     },
     {
-      "average_acc_power_mw": 91,
-      "average_memory_power_mw": 133,
+      "average_acc_power_mw": 122,
+      "average_memory_power_mw": 132,
       "compute_cycles": 4160,
-      "max_cycles": 13824,
+      "max_cycles": 20800,
       "node_id": 136,
       "ops": 102144
     },
     {
-      "average_acc_power_mw": 70,
-      "average_memory_power_mw": 518,
+      "average_acc_power_mw": 72,
+      "average_memory_power_mw": 517,
       "compute_cycles": 3584,
       "max_cycles": 49152,
       "node_id": 140,
       "ops": 345408
     },
     {
-      "average_acc_power_mw": 10,
+      "average_acc_power_mw": 12,
       "average_memory_power_mw": 4,
       "compute_cycles": 1344,
       "max_cycles": 1344,
@@ -12918,7 +12883,7 @@
       "ops": 0
     },
     {
-      "average_acc_power_mw": 90,
+      "average_acc_power_mw": 91,
       "average_memory_power_mw": 224,
       "compute_cycles": 64,
       "max_cycles": 384,

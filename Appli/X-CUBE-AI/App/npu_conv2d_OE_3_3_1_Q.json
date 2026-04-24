@@ -9,13 +9,13 @@
                 }
             ],
             "name": "network",
-            "generated_time": "2026-04-22T12:34:26+0900"
+            "generated_time": "2026-04-24T16:31:20+0900"
         },
         "tools": [
             {
                 "name": "ST.EdgeAI.Core",
                 "version": "4.0.0-20500 359356bb0",
-                "arguments": "generate -m .\\n6_work\\npu_conv2d.tflite --target stm32n6 --st-neural-art --output .\\n6_work\\cubemx\\NPU_Accel_Tutorial\\Appli\\X-CUBE-AI\\App",
+                "arguments": "generate -m D:/01_Projects/05_Ship_Battery(Sub)/n6_work/npu_conv2d.tflite --target stm32n6 --st-neural-art --output D:/01_Projects/05_Ship_Battery(Sub)/n6_work/cubemx/NPU_Accel_Tutorial/Appli/X-CUBE-AI/App --workspace D:/01_Projects/05_Ship_Battery(Sub)/st_ai_ws",
                 "environment": [],
                 "input_model": {
                     "model_files": [
@@ -32,7 +32,7 @@
             }
         ],
         "test_name": "",
-        "network_signature": "0xb427b679cefebafb"
+        "network_signature": "0xe66d023fb0ba2bd4"
     },
     "model_info": {
         "original_inputs": [

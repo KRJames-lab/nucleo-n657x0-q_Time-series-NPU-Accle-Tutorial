@@ -117,18 +117,7 @@ int main(void)
 
   /* Initialize leds */
   BSP_LED_Init(LED_BLUE);
-  BSP_LED_Init(LED_RED);
-  BSP_LED_Init(LED_GREEN);
   BSP_LED_On(LED_BLUE);
-
-  /* DIAG: 3 fast blinks → FSBL init completed, about to BOOT_Application */
-  for (int _i = 0; _i < 3; _i++) {
-    HAL_Delay(150);
-    BSP_LED_Off(LED_BLUE);
-    HAL_Delay(150);
-    BSP_LED_On(LED_BLUE);
-  }
-  HAL_Delay(500);
 
   /* Launch the application */
   if (BOOT_OK != BOOT_Application())
@@ -168,7 +157,8 @@ void SystemClock_Config(void)
 
   /** Configure the main internal regulator output voltage
   */
-  if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE0) != HAL_OK)
+  /* SCALE1 (Template canonical, 600 MHz CPU 한계). VDDIO3 1.8V rail 안정 위해. */
+  if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
   {
     Error_Handler();
   }
@@ -215,21 +205,9 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL1.PLLFractional = 0;
   RCC_OscInitStruct.PLL1.PLLP1 = 1;
   RCC_OscInitStruct.PLL1.PLLP2 = 1;
-  RCC_OscInitStruct.PLL2.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL2.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL2.PLLM = 1;
-  RCC_OscInitStruct.PLL2.PLLN = 25;
-  RCC_OscInitStruct.PLL2.PLLFractional = 0;
-  RCC_OscInitStruct.PLL2.PLLP1 = 1;
-  RCC_OscInitStruct.PLL2.PLLP2 = 1;
+  RCC_OscInitStruct.PLL2.PLLState = RCC_PLL_NONE;   /* Template canonical */
   RCC_OscInitStruct.PLL3.PLLState = RCC_PLL_NONE;
-  RCC_OscInitStruct.PLL4.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL4.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL4.PLLM = 1;
-  RCC_OscInitStruct.PLL4.PLLN = 25;
-  RCC_OscInitStruct.PLL4.PLLFractional = 0;
-  RCC_OscInitStruct.PLL4.PLLP1 = 1;
-  RCC_OscInitStruct.PLL4.PLLP2 = 1;
+  RCC_OscInitStruct.PLL4.PLLState = RCC_PLL_NONE;   /* Template canonical */
 
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -249,12 +227,13 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV1;
   RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV1;
   RCC_ClkInitStruct.APB5CLKDivider = RCC_APB5_DIV1;
-  RCC_ClkInitStruct.IC1Selection.ClockSelection = RCC_ICCLKSOURCE_PLL2;
+  /* Template canonical: IC1 from PLL1/2 = 600 MHz CPU, IC6 from PLL1/4 = 300 MHz NPU */
+  RCC_ClkInitStruct.IC1Selection.ClockSelection = RCC_ICCLKSOURCE_PLL1;
   RCC_ClkInitStruct.IC1Selection.ClockDivider = 2;
   RCC_ClkInitStruct.IC2Selection.ClockSelection = RCC_ICCLKSOURCE_PLL1;
   RCC_ClkInitStruct.IC2Selection.ClockDivider = 3;
-  RCC_ClkInitStruct.IC6Selection.ClockSelection = RCC_ICCLKSOURCE_PLL4;
-  RCC_ClkInitStruct.IC6Selection.ClockDivider = 2;
+  RCC_ClkInitStruct.IC6Selection.ClockSelection = RCC_ICCLKSOURCE_PLL1;
+  RCC_ClkInitStruct.IC6Selection.ClockDivider = 4;
   RCC_ClkInitStruct.IC11Selection.ClockSelection = RCC_ICCLKSOURCE_PLL1;
   RCC_ClkInitStruct.IC11Selection.ClockDivider = 3;
 
@@ -488,6 +467,7 @@ static int32_t OTP_Config(void)
   }
   return retr;
 }
+
 /* USER CODE END 4 */
 
 /**

@@ -1,6 +1,6 @@
 ST Edge AI Core v4.0.0-20500 359356bb0
-Created date          : 2026-04-22 12:34:27
-Parameters            : generate -m .\n6_work\npu_conv2d.tflite --target stm32n6 --st-neural-art --output .\n6_work\cubemx\NPU_Accel_Tutorial\Appli\X-CUBE-AI\App
+Created date          : 2026-04-24 16:31:23
+Parameters            : generate -m D:/01_Projects/05_Ship_Battery(Sub)/n6_work/npu_conv2d.tflite --target stm32n6 --st-neural-art --output D:/01_Projects/05_Ship_Battery(Sub)/n6_work/cubemx/NPU_Accel_Tutorial/Appli/X-CUBE-AI/App --workspace D:/01_Projects/05_Ship_Battery(Sub)/st_ai_ws
 
 Model name - npu_conv2d
 ------ ------------------------------- ---------------------- ------------- --------- -------------------- 
@@ -85,11 +85,11 @@ Memory usage information  (input/output buffers are included in activations)
 ------------------------------------------------------------------------------------
 	flexMEM    [0x34000000 - 0x34000000]:          0  B /          0  B  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
 	cpuRAM1    [0x34064000 - 0x34064000]:          0  B /          0  B  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
-	cpuRAM2    [0x34100000 - 0x34200000]:          0  B /      1.000 MB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
-	npuRAM3    [0x34200000 - 0x34270000]:          0  B /    448.000 kB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
-	npuRAM4    [0x34270000 - 0x342E0000]:          0  B /    448.000 kB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
-	npuRAM5    [0x342E0000 - 0x34350000]:     46.875 kB /    448.000 kB  ( 10.46 % used) -- weights:          0  B (  0.00 % used)  activations:     46.875 kB ( 10.46 % used)
-	npuRAM6    [0x34350000 - 0x343C0000]:          0  B /    448.000 kB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	cpuRAM2    [0x34100000 - 0x34200000]:     46.875 kB /      1.000 MB  (  4.58 % used) -- weights:          0  B (  0.00 % used)  activations:     46.875 kB (  4.58 % used)
+	npuRAM3    [0x34200000 - 0x34200000]:          0  B /          0  B  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	npuRAM4    [0x34270000 - 0x34270000]:          0  B /          0  B  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	npuRAM5    [0x342E0000 - 0x342E0000]:          0  B /          0  B  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	npuRAM6    [0x34350000 - 0x34350000]:          0  B /          0  B  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
 	octoFlash  [0x71000000 - 0x78000000]:     56.157 kB /    112.000 MB  (  0.05 % used) -- weights:     56.157 kB (  0.05 % used)  activations:          0  B (  0.00 % used)
 	hyperRAM   [0x90000000 - 0x92000000]:          0  B /     32.000 MB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
 ---
@@ -99,7 +99,7 @@ Total:                                           103.032 kB                     
 
 Used memory ranges
 ------------------------------------------------------------------------------------
-	npuRAM5    [0x342E0000 - 0x34350000]: 0x342E0000-0x342EBB80
+	cpuRAM2    [0x34100000 - 0x34200000]: 0x34100000-0x3410BB80
 	octoFlash  [0x71000000 - 0x78000000]: 0x71000000-0x7100E0B0
 ====================================================================================
 
